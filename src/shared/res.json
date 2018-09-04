@@ -1,0 +1,117 @@
+{
+  "id": 5,
+  "images": [],
+  "generation": {
+    "id": 4898,
+    "name": "First generation Chiron",
+    "model": {
+      "id": 2054,
+      "name": "Chiron",
+      "brand": {
+        "id": 15,
+        "name": "Bugatti",
+        "popular": false,
+        "image": null
+      },
+      "production_start": "2018-05-25T13:03:00.080805Z",
+      "production_end": "2018-05-25T13:03:00.080813Z"
+    },
+    "production_start": "2018-06-20T07:18:20.881449Z",
+    "production_end": "2018-06-20T07:18:20.881551Z"
+  },
+  "advert": {
+    "id": 8,
+    "city": {
+      "id": 3,
+      "name": "Molsheim",
+      "region": {
+        "id": 3,
+        "name": "Grand Est",
+        "country": {
+          "id": 74,
+          "name": "France"
+        }
+      }
+    },
+    "created_at": "2018-06-20T08:16:49.278169Z",
+    "updated_at": "2018-06-20T08:16:49.278261Z",
+    "additional_information": "The Bugatti Chiron is a mid-engined two-seater sports car developed and manufactured in Molsheim, France, by Bugatti Automobiles S.A.S. as the successor to the Bugatti Veyron.",
+    "contact_person": "Stephan Winkelmann",
+    "currency": "eur",
+    "email": "sail@buggati.com",
+    "exchange": false,
+    "price": 2400000,
+    "promo_code": "Veyron",
+    "reseller_allowed": false,
+    "tel_num": "+39 051 9597282",
+    "posted_time": "2018-06-20T08:16:49.278418Z",
+    "user": 5
+  },
+  "information": {
+    "id": 6,
+    "sunroof": true,
+    "tined_windows": true,
+    "xenon_headlights": true,
+    "alloy_wheels": true,
+    "board_computer": true,
+    "gas_cylinder_equipment": false,
+    "rain_sensor": true,
+    "cruise_control": true,
+    "navigation": true,
+    "heated_mirrors": true,
+    "headlight_washer": true,
+    "central_lock": true,
+    "security_alarm": true,
+    "heated_helm": true,
+    "heated_seal": true,
+    "electric_mirrors": true,
+    "abs": true,
+    "anti_sleep": true,
+    "esp": true,
+    "parktronic": true,
+    "cd": false,
+    "tv": true,
+    "interior_type": "any",
+    "interior_flavor": "any",
+    "seat_count": "two",
+    "climate_control": "any",
+    "window_regulator": "any",
+    "driver_seat_regulator": "any",
+    "passenger_seat_regulator": "any",
+    "helm_regulator": "any",
+    "airbag": "any"
+  },
+  "is_crashed": false,
+  "cubic_capacity": 8,
+  "custom_clearance": true,
+  "production_date": 2016,
+  "guarantee": true,
+  "kilometer": 0,
+  "transmission": "manual",
+  "drive_type": "left_hand",
+  "drive_wheel_type": "front_wheel_drive",
+  "fuel_type": "petrol",
+  "car_type": null,
+  "power": 1489,
+  "owners_count": "one",
+  "purchased_year": 2018,
+  "vin": "3.14159",
+  "reg_certificate": "0–400–0-41.96",
+  "used": false,
+  "color": {
+    "id": 1,
+    "hash": "#008000",
+    "name": "Green"
+  },
+  "seen_count": 0,
+  "daily_seen_count": 0,
+  "currency": "eur",
+  "price": [
+    {
+      "price_eur": 2400000,
+      "price_amd": 1329600000,
+      "price_usd": 2764241.1642411645,
+      "price_rub": 156000000
+    }
+  ]
+}
