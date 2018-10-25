@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 
 export abstract class BaseHttpService {
 
-  constructor(private http: HttpClient) {
+  protected constructor(private http: HttpClient) {
   }
 
   private static API_URL = environment.apiUrl;

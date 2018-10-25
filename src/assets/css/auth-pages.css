@@ -1,0 +1,47 @@
+.auth-pages {
+    background: url("../images/backgrounds/auth-form.png") no-repeat;
+    background-size: cover;
+    height: 640px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.auth-pages  .auth-form {
+    margin: 50px 0;
+    background-color: #ffffff;
+    padding: 50px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.auth-form input[type='text'], input[type='password'] {
+    background: #ffffff!important;
+    color: #000;
+}
+
+.auth-form .m-btn{
+    margin: 0!important;
+}
+
+.auth-form .form-align {
+    line-height: 49px;
+}
+
+.auth-form .form-align .s-submitCheck {
+    text-transform: uppercase;
+}
+
+.auth-form .form-links {
+    margin-top: 30px;
+}
+
+.auth-form .form-hint {
+    font: 400 14px 'Open Sans',sans-serif;
+    color: #999999;
+    font-style: italic;
+    margin-bottom: 35px;
+}

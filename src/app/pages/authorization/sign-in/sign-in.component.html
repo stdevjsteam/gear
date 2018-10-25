@@ -1,0 +1,27 @@
+<header class="b-contacts__form-header s-lineDownLeft">
+  <h2 class="s-titleDet">Sign in</h2>
+</header>
+<div id="success"></div>
+<form id="contactForm" novalidate="" class="s-form">
+  <input class="invalid" type="text" placeholder="EMAIL ADDRESS" value="" name="user-email" id="user-email">
+  <p class="error-message">This field is required.</p>
+  <input type="password" placeholder="PASSWORD" value="" name="user-password" id="user-password">
+  <div class="row form-links">
+    <div class="col-lg-6 col-sm-12 form-align">
+      <input type="checkbox" name="check1" id="check1">
+      <label class="s-submitCheckLabel" for="check1"><span class="fa fa-check"></span></label>
+      <label class="s-submitCheck" for="check1">Remember me</label>
+    </div>
+    <div class="col-lg-6 col-sm-12 text-right">
+      <button type="submit" class="btn m-btn">SIGN IN<span class="fa fa-angle-right"></span></button>
+    </div>
+  </div>
+  <div class="row form-links">
+    <div class="col-lg-6 col-sm-12">
+      <a routerLink="/sign-up">Don't have an account?</a>
+    </div>
+    <div class="col-lg-6 col-sm-12 text-right">
+      <a routerLink="/forgot-password">Forgot password?</a>
+    </div>
+  </div>
+</form>
