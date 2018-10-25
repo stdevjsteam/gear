@@ -14,6 +14,7 @@ import { FilterComponent } from './pages/filter/filter.component';
 import { FilterTableComponent } from './pages/filter-table/filter-table.component';
 import {ProfileModule} from './pages/profile/profile.module';
 import {CookieService} from 'ngx-cookie-service';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {CookieService} from 'ngx-cookie-service';
     HomeComponent,
     FilterComponent,
     FilterTableComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

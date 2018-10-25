@@ -3,6 +3,7 @@ import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {FilterComponent} from './pages/filter/filter.component';
 import {FilterTableComponent} from './pages/filter-table/filter-table.component';
+import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -11,7 +12,7 @@ const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '', loadChildren: './pages/authorization/auth.module#AuthModule'},
   {path: '', loadChildren: './pages/profile/profile.module#ProfileModule'},
-  { path: '**', redirectTo: 'error-page' }
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
