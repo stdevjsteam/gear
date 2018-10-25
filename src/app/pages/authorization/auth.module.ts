@@ -6,26 +6,28 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import {AuthorizationService} from '../../services/authorization.service';
 import { AuthorizationComponent } from './authorization.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {path: '', component: AuthorizationComponent, children: [
       { path: 'sign-in', component: SignInComponent },
       { path: 'sign-up', component: SignUpComponent },
-      { path: 'forgot-password', component: ForgotPasswordComponent }
-    ]}
+      { path: 'forgot-password', component: ForgotPasswordComponent },
+      { path: 'reset-password', component: ResetPasswordComponent }
+    ]},
 ];
-const routerModule = RouterModule.forChild(routes);
 
 @NgModule({
   declarations: [
     SignInComponent,
     SignUpComponent,
     AuthorizationComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,
-    routerModule
+    RouterModule.forChild(routes)
   ],
   providers: [
     AuthorizationService
