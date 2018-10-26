@@ -1,10 +1,11 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {OwnAddsComponent} from './own-adds/own-adds.component';
 import {FavouritesComponent} from './favourites/favourites.component';
 import {AccountInformationComponent} from './account-information/account-information.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ProfileComponent} from './profile.component';
+import {SharedModule} from '../../../shared/modules/shared/shared.module';
 
 const routes: Routes = [
   {
@@ -31,6 +32,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ],
   declarations: [
@@ -38,6 +40,9 @@ const routes: Routes = [
     FavouritesComponent,
     OwnAddsComponent,
     ProfileComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class ProfileModule {

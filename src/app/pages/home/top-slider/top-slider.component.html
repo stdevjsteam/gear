@@ -1,0 +1,24 @@
+<section class="b-slider">
+  <div id="carousel" class="slide carousel carousel-fade">
+    <div class="carousel-inner" [@homeCarousel]="currentImageSrc">
+
+      <div class="item active">
+        <img [src]="currentImageSrc" alt="sliderImg" />
+        <div class="container">
+          <div class="carousel-caption b-slider__info">
+            <h3>Find your dream vehicle.</h3>
+            <h2>Drive your dreams.</h2>
+            <a class="btn m-btn" routerLink="/filter">start now<span class="fa fa-angle-right"></span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a class="carousel-control right" (click)="nextImage()">
+      <span class="fa fa-angle-right m-control-right"></span>
+    </a>
+    <a class="carousel-control left" (click)="prevImage()">
+      <span class="fa fa-angle-left m-control-left"></span>
+    </a>
+  </div>
+</section><!--b-slider-->

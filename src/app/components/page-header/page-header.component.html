@@ -1,0 +1,16 @@
+<section class="b-pageHeader">
+  <div class="container">
+    <h1>{{ data.h1 }}</h1>
+    <div class="b-pageHeader__search" *ngIf="data.h3">
+      <h3>{{ data.h3 }}</h3>
+    </div>
+  </div>
+</section><!--b-pageHeader-->
+
+<div class="b-breadCumbs s-shadow">
+  <div class="container">
+    <a routerLink="/home" class="b-breadCumbs__page">Home</a>
+    <span class="fa fa-angle-right"></span>
+    <a [routerLink]="data.routerLink" routerLinkActive="true" class="b-breadCumbs__page m-active">{{ data.h1 }}</a>
+  </div>
+</div><!--b-breadCumbs-->

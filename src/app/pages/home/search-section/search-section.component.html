@@ -1,0 +1,175 @@
+<section class="b-search">
+  <div class="container">
+    <form action="filter.html" method="POST" class="b-search__main s-submit">
+      <div class="b-search__main-title">
+        <h2>UNSURE WHICH VEHICLE YOU ARE LOOKING FOR? FIND IT HERE</h2>
+      </div>
+      <div class="b-search__main-type">
+        <div class="col-xs-12 col-md-2 s-noLeftPadding">
+          <h4>Select vehicle type</h4>
+        </div>
+        <div class="col-xs-12 col-md-10">
+          <div class="row">
+            <div class="col-xs-2">
+              <input id="type1" type="radio" name="type" />
+              <label for="type1" class="b-search__main-type-svg" pickup>
+              </label>
+              <h5><label for="type1">Pickup</label></h5>
+            </div>
+            <div class="col-xs-2">
+              <input id="type2" type="radio" name="type" />
+              <label for="type2" class="b-search__main-type-svg" suv>
+              </label>
+              <h5><label for="type2">Suv</label></h5>
+            </div>
+            <div class="col-xs-2">
+              <input id="type3" type="radio" name="type" />
+              <label for="type3" class="b-search__main-type-svg" coupe>
+              </label>
+              <h5><label for="type3">Coupe</label></h5>
+            </div>
+            <div class="col-xs-2">
+              <input id="type4" type="radio" name="type" />
+              <label for="type4" class="b-search__main-type-svg" convertible>
+              </label>
+              <h5><label for="type4">Convertible</label></h5>
+            </div>
+            <div class="col-xs-2">
+              <input id="type5" type="radio" name="type" />
+              <label for="type5" class="b-search__main-type-svg" sedan>
+              </label>
+              <h5><label for="type5">Sedan</label></h5>
+            </div>
+            <div class="col-xs-2">
+              <input id="type6" type="radio" name="type" />
+              <label for="type6" class="b-search__main-type-svg" minicar>
+              </label>
+              <h5><label for="type6">Minicar</label></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="b-search__main-form">
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+            <div class="m-firstSelects">
+              <div class="col-xs-4">
+                <select name="select1">
+                  <option value="" selected="">Any Make</option>
+                </select>
+                <span class="fa fa-caret-down"></span>
+                <p>MISSING MANUFACTURER?</p>
+              </div>
+              <div class="col-xs-4">
+                <select name="select2">
+                  <option value="" selected="">Any Model</option>
+                </select>
+                <span class="fa fa-caret-down"></span>
+                <p>MISSING MODEL?</p>
+              </div>
+              <div class="col-xs-4">
+                <select name="select3">
+                  <option value="" selected="">Generation</option>
+                </select>
+                <span class="fa fa-caret-down"></span>
+                <p>Preferred generation</p>
+              </div>
+            </div>
+            <div class="m-secondSelects b-search__main-form-range">
+              <label>PRICE RANGE</label>
+              <div class="slider"></div>
+              <input type="hidden" name="min" class="j-min" />
+              <input type="hidden" name="max" class="j-max" />
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 text-left s-noPadding">
+            <div class="b-search__main-form-range">
+              <div class="col-xs-6">
+                <select name="select4">
+                  <option value="" selected="">Min Year</option>
+                </select>
+                <span class="fa fa-caret-down"></span>
+              </div>
+              <div class="col-xs-6">
+                <select name="select5">
+                  <option value="" selected="">Max Year</option>
+                </select>
+                <span class="fa fa-caret-down"></span>
+              </div>
+            </div>
+            <div class="b-search__main-form-submit">
+              <a id="drop-label" class="drop-label">Advanced search</a>
+              <button type="submit" class="btn m-btn">Search the Vehicle<span class="fa fa-angle-right"></span></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-12 advanced-options" id="advanced-options">
+              <div class="m-advancedSelects">
+                <div class="col-xs-4 mb-sm">
+                  <select name="select1">
+                    <option value="" selected="">Any Make</option>
+                  </select>
+                  <span class="fa fa-caret-down"></span>
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 mb-sm">
+                  <select name="select1">
+                    <option value="" selected="">Any Make</option>
+                  </select>
+                  <span class="fa fa-caret-down"></span>
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 s-submit mb-sm">
+                  <input type="text" placeholder="Enter " >
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 mb-sm s-submit">
+                  <input type="text" placeholder="Enter " >
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 mb-sm s-submit">
+                  <input type="text" placeholder="Enter " >
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 mb-sm s-submit">
+                  <input type="text" placeholder="Enter " >
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 mb-sm s-submit">
+                  <input type="text" placeholder="Enter " >
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 mb-sm">
+                  <select name="select1">
+                    <option value="" selected="">Any Make</option>
+                  </select>
+                  <span class="fa fa-caret-down"></span>
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 mb-sm s-submit">
+                  <input type="text" placeholder="Enter " >
+                  <p>MISSING MANUFACTURER?</p>
+                </div>
+                <div class="col-xs-4 mb-sm b-submit__main-element">
+                  <input type="checkbox" name="check1" id="check1">
+                  <label class="s-submitCheckLabel" for="check1"><span class="fa fa-check"></span></label>
+                  <label class="s-submitCheck" for="check1">Trip Computer</label>
+                </div>
+                <div class="col-xs-4 mb-sm b-submit__main-element">
+                  <input type="checkbox" name="check5" id="check2">
+                  <label class="s-submitCheckLabel" for="check2"><span class="fa fa-check"></span></label>
+                  <label class="s-submitCheck" for="check2">Side Airbags</label>
+                </div>
+                <div class="col-xs-4 mb-sm b-submit__main-element">
+                  <input type="checkbox" name="check5" id="check3">
+                  <label class="s-submitCheckLabel" for="check3"><span class="fa fa-check"></span></label>
+                  <label class="s-submitCheck" for="check3">Fog Lamps</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section><!--b-search-->
