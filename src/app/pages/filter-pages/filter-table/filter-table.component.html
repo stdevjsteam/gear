@@ -1,318 +1,169 @@
-<div class="m-listTableTwo" data-scrolling-animations="true" data-equal-height=".b-items__cell">
-  <section class="b-pageHeader">
-    <div class="container">
-      <h1>Auto Listings</h1>
-      <div class="b-pageHeader__search">
-        <h3>Your search returned 28 results</h3>
-      </div>
-    </div>
-  </section><!--b-pageHeader-->
-
-  <div class="b-breadCumbs s-shadow">
-    <div class="container">
-      <a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="filter.html" class="b-breadCumbs__page m-active">Search Results</a>
-    </div>
-  </div><!--b-breadCumbs-->
-
-  <div class="b-infoBar">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-xs-12">
-          <div class="b-infoBar__compare">
-            <div class="dropdown">
-              <a href="#" class="dropdown-toggle b-infoBar__compare-item" data-toggle='dropdown'><span class="fa fa-clock-o"></span>RECENTLY VIEWED<span class="fa fa-caret-down"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="detail.html">Item</a></li>
-                <li><a href="detail.html">Item</a></li>
-                <li><a href="detail.html">Item</a></li>
-                <li><a href="detail.html">Item</a></li>
-              </ul>
+<div class="col-lg-9 col-sm-8 col-xs-12">
+  <div class="row m-border">
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <div class="b-items__cell">
+        <div class="b-items__cars-one-img">
+          <img class='img-responsive' src="assets/media/260x230/chevroletTable.jpg" alt='chevrolet'/>
+          <span class="b-items__cars-one-img-type m-premium">PREMIUM</span>
+        </div>
+        <div class="b-items__cell-info">
+          <div class="s-lineDownLeft b-items__cell-info-title">
+            <h2 class=""><a href="detail.html">Chevrolet Silverado 1500</a></h2>
+          </div>
+          <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
+          <div>
+            <div class="row m-smallPadding">
+              <div class="col-xs-5">
+                <span class="b-items__cars-one-info-title">Body Style:</span>
+                <span class="b-items__cars-one-info-title">Mileage:</span>
+                <span class="b-items__cars-one-info-title">Transmission:</span>
+                <span class="b-items__cars-one-info-title">Specs:</span>
+              </div>
+              <div class="col-xs-7">
+                <span class="b-items__cars-one-info-value">Sedan</span>
+                <span class="b-items__cars-one-info-value">35,000 KM</span>
+                <span class="b-items__cars-one-info-value">6-Speed Auto</span>
+                <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-8 col-xs-12">
-          <div class="b-infoBar__select">
-            <form method="post" action="/">
-              <div class="b-infoBar__select-one">
-                <span class="b-infoBar__select-one-title">SELECT VIEW</span>
-                <a href="filter.html" class="m-list"><span class="fa fa-list"></span></a>
-                <a href="filter-table.html" class="m-table m-active"><span class="fa fa-table"></span></a>
-              </div>
-              <div class="b-infoBar__select-one">
-                <span class="b-infoBar__select-one-title">SHOW ON PAGE</span>
-                <select name="select1" class="m-select">
-                  <option value="" selected="">10 items</option>
-                </select>
-                <span class="fa fa-caret-down"></span>
-              </div>
-              <div class="b-infoBar__select-one">
-                <span class="b-infoBar__select-one-title">SORT BY</span>
-                <select name="select2" class="m-select">
-                  <option value="" selected="">Last Added</option>
-                </select>
-                <span class="fa fa-caret-down"></span>
-              </div>
-            </form>
-          </div>
+          <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
         </div>
       </div>
     </div>
-  </div><!--b-infoBar-->
-
-  <div class="b-items">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-sm-4 col-xs-12">
-          <aside class="b-items__aside">
-            <h2 class="s-title">REFINE YOUR SEARCH</h2>
-            <div class="b-items__aside-main">
-              <form>
-                <div class="b-items__aside-main-body">
-                  <div class="b-items__aside-main-body-item">
-                    <label>SELECT A MAKE</label>
-                    <div>
-                      <select name="select1" class="m-select">
-                        <option value="" selected="">Any Make</option>
-                      </select>
-                      <span class="fa fa-caret-down"></span>
-                    </div>
-                  </div>
-                  <div class="b-items__aside-main-body-item">
-                    <label>SELECT A MODEL</label>
-                    <div>
-                      <select name="select1" class="m-select">
-                        <option value="" selected="">Any Make</option>
-                      </select>
-                      <span class="fa fa-caret-down"></span>
-                    </div>
-                  </div>
-                  <div class="b-items__aside-main-body-item">
-                    <label>PRICE RANGE</label>
-                    <div class="slider"></div>
-                    <input type="hidden" name="min" value="100" class="j-min" />
-                    <input type="hidden" name="max" value="1000" class="j-max" />
-                  </div>
-                  <div class="b-items__aside-main-body-item">
-                    <label>VEHICLE TYPE</label>
-                    <div>
-                      <select name="select1" class="m-select">
-                        <option value="" selected="">Any Type</option>
-                      </select>
-                      <span class="fa fa-caret-down"></span>
-                    </div>
-                  </div>
-                  <div class="b-items__aside-main-body-item">
-                    <label>VEHICLE STATUS</label>
-                    <div>
-                      <select name="select1" class="m-select">
-                        <option value="" selected="">Any Status</option>
-                      </select>
-                      <span class="fa fa-caret-down"></span>
-                    </div>
-                  </div>
-                  <div class="b-items__aside-main-body-item">
-                    <label>FUEL TYPE</label>
-                    <div>
-                      <select name="select1" class="m-select">
-                        <option value="" selected="">All Fuel Types</option>
-                      </select>
-                      <span class="fa fa-caret-down"></span>
-                    </div>
-                  </div>
-                </div>
-                <footer class="b-items__aside-main-footer">
-                  <button type="submit" class="btn m-btn">FILTER VEHICLES<span class="fa fa-angle-right"></span></button><br />
-                  <a href="">RESET ALL FILTERS</a>
-                </footer>
-              </form>
-            </div>
-            <div class="b-items__aside-sell">
-              <div class="b-items__aside-sell-img">
-                <h3>SELL YOUR CAR</h3>
-              </div>
-              <div class="b-items__aside-sell-info">
-                <p>
-                  Nam tellus enimds eleifend dignis lsim
-                  biben edum tristique sed metus fusce
-                  Maecenas lobortis.
-                </p>
-                <a href="submit1.html" class="btn m-btn">REGISTER NOW<span class="fa fa-angle-right"></span></a>
-              </div>
-            </div>
-          </aside>
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <div class="b-items__cell">
+        <div class="b-items__cars-one-img">
+          <img class='img-responsive' src="assets/media/260x230/ferrariTable.jpg" alt='ferrari'/>
+          <span class="b-items__cars-one-img-type m-listing">NE LISTING</span>
         </div>
-
-        <div class="col-lg-9 col-sm-8 col-xs-12">
-          <div class="row m-border">
-            <div class="col-lg-4 col-md-6 col-xs-12">
-              <div class="b-items__cell">
-                <div class="b-items__cars-one-img">
-                  <img class='img-responsive' src="assets/media/260x230/chevroletTable.jpg" alt='chevrolet'/>
-                  <span class="b-items__cars-one-img-type m-premium">PREMIUM</span>
-                </div>
-                <div class="b-items__cell-info">
-                  <div class="s-lineDownLeft b-items__cell-info-title">
-                    <h2 class=""><a href="detail.html">Chevrolet Silverado 1500</a></h2>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
-                  <div>
-                    <div class="row m-smallPadding">
-                      <div class="col-xs-5">
-                        <span class="b-items__cars-one-info-title">Body Style:</span>
-                        <span class="b-items__cars-one-info-title">Mileage:</span>
-                        <span class="b-items__cars-one-info-title">Transmission:</span>
-                        <span class="b-items__cars-one-info-title">Specs:</span>
-                      </div>
-                      <div class="col-xs-7">
-                        <span class="b-items__cars-one-info-value">Sedan</span>
-                        <span class="b-items__cars-one-info-value">35,000 KM</span>
-                        <span class="b-items__cars-one-info-value">6-Speed Auto</span>
-                        <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
-                      </div>
-                    </div>
-                  </div>
-                  <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
-                </div>
+        <div class="b-items__cell-info">
+          <div class="s-lineDownLeft b-items__cell-info-title">
+            <h2 class=""><a href="detail.html">2015 Ferrari LaFerrar</a></h2>
+          </div>
+          <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
+          <div>
+            <div class="row m-smallPadding">
+              <div class="col-xs-5">
+                <span class="b-items__cars-one-info-title">Body Style:</span>
+                <span class="b-items__cars-one-info-title">Mileage:</span>
+                <span class="b-items__cars-one-info-title">Transmission:</span>
+                <span class="b-items__cars-one-info-title">Specs:</span>
               </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12">
-              <div class="b-items__cell">
-                <div class="b-items__cars-one-img">
-                  <img class='img-responsive' src="assets/media/260x230/ferrariTable.jpg" alt='ferrari'/>
-                  <span class="b-items__cars-one-img-type m-listing">NE LISTING</span>
-                </div>
-                <div class="b-items__cell-info">
-                  <div class="s-lineDownLeft b-items__cell-info-title">
-                    <h2 class=""><a href="detail.html">2015 Ferrari LaFerrar</a></h2>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
-                  <div>
-                    <div class="row m-smallPadding">
-                      <div class="col-xs-5">
-                        <span class="b-items__cars-one-info-title">Body Style:</span>
-                        <span class="b-items__cars-one-info-title">Mileage:</span>
-                        <span class="b-items__cars-one-info-title">Transmission:</span>
-                        <span class="b-items__cars-one-info-title">Specs:</span>
-                      </div>
-                      <div class="col-xs-7">
-                        <span class="b-items__cars-one-info-value">Sedan</span>
-                        <span class="b-items__cars-one-info-value">35,000 KM</span>
-                        <span class="b-items__cars-one-info-value">6-Speed Auto</span>
-                        <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
-                      </div>
-                    </div>
-                  </div>
-                  <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12">
-              <div class="b-items__cell">
-                <div class="b-items__cars-one-img">
-                  <img class='img-responsive' src="assets/media/260x230/ferrariTable.jpg" alt='ferrari'/>
-                  <span class="b-items__cars-one-img-type m-listing">NE LISTING</span>
-                </div>
-                <div class="b-items__cell-info">
-                  <div class="s-lineDownLeft b-items__cell-info-title">
-                    <h2 class=""><a href="detail.html">2015 Ferrari LaFerrar</a></h2>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
-                  <div>
-                    <div class="row m-smallPadding">
-                      <div class="col-xs-5">
-                        <span class="b-items__cars-one-info-title">Body Style:</span>
-                        <span class="b-items__cars-one-info-title">Mileage:</span>
-                        <span class="b-items__cars-one-info-title">Transmission:</span>
-                        <span class="b-items__cars-one-info-title">Specs:</span>
-                      </div>
-                      <div class="col-xs-7">
-                        <span class="b-items__cars-one-info-value">Sedan</span>
-                        <span class="b-items__cars-one-info-value">35,000 KM</span>
-                        <span class="b-items__cars-one-info-value">6-Speed Auto</span>
-                        <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
-                      </div>
-                    </div>
-                  </div>
-                  <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12">
-              <div class="b-items__cell">
-                <div class="b-items__cars-one-img">
-                  <img class='img-responsive' src="assets/media/260x230/ferrariTable.jpg" alt='ferrari'/>
-                  <span class="b-items__cars-one-img-type m-listing">NE LISTING</span>
-                </div>
-                <div class="b-items__cell-info">
-                  <div class="s-lineDownLeft b-items__cell-info-title">
-                    <h2 class=""><a href="detail.html">2015 Ferrari LaFerrar</a></h2>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
-                  <div>
-                    <div class="row m-smallPadding">
-                      <div class="col-xs-5">
-                        <span class="b-items__cars-one-info-title">Body Style:</span>
-                        <span class="b-items__cars-one-info-title">Mileage:</span>
-                        <span class="b-items__cars-one-info-title">Transmission:</span>
-                        <span class="b-items__cars-one-info-title">Specs:</span>
-                      </div>
-                      <div class="col-xs-7">
-                        <span class="b-items__cars-one-info-value">Sedan</span>
-                        <span class="b-items__cars-one-info-value">35,000 KM</span>
-                        <span class="b-items__cars-one-info-value">6-Speed Auto</span>
-                        <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
-                      </div>
-                    </div>
-                  </div>
-                  <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-xs-12">
-              <div class="b-items__cell">
-                <div class="b-items__cars-one-img">
-                  <img class='img-responsive' src="assets/media/260x230/chevroletTable.jpg" alt='chevrolet'/>
-                  <span class="b-items__cars-one-img-type m-premium">PREMIUM</span>
-                </div>
-                <div class="b-items__cell-info">
-                  <div class="s-lineDownLeft b-items__cell-info-title">
-                    <h2 class=""><a href="detail.html">Chevrolet Silverado 1500</a></h2>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
-                  <div>
-                    <div class="row m-smallPadding">
-                      <div class="col-xs-5">
-                        <span class="b-items__cars-one-info-title">Body Style:</span>
-                        <span class="b-items__cars-one-info-title">Mileage:</span>
-                        <span class="b-items__cars-one-info-title">Transmission:</span>
-                        <span class="b-items__cars-one-info-title">Specs:</span>
-                      </div>
-                      <div class="col-xs-7">
-                        <span class="b-items__cars-one-info-value">Sedan</span>
-                        <span class="b-items__cars-one-info-value">35,000 KM</span>
-                        <span class="b-items__cars-one-info-value">6-Speed Auto</span>
-                        <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
-                      </div>
-                    </div>
-                  </div>
-                  <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
-                </div>
+              <div class="col-xs-7">
+                <span class="b-items__cars-one-info-value">Sedan</span>
+                <span class="b-items__cars-one-info-value">35,000 KM</span>
+                <span class="b-items__cars-one-info-value">6-Speed Auto</span>
+                <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
               </div>
             </div>
           </div>
-          <div class="b-items__pagination">
-            <div class="b-items__pagination-main">
-              <a data-toggle="modal" data-target="#myModal" href="#" class="m-left"><span class="fa fa-angle-left"></span></a>
-              <span class="m-active"><a href="#">1</a></span>
-              <span><a href="#">2</a></span>
-              <span><a href="#">3</a></span>
-              <span><a href="#">4</a></span>
-              <a href="#" class="m-right"><span class="fa fa-angle-right"></span></a>
-            </div>
-          </div>
+          <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
         </div>
       </div>
     </div>
-  </div><!--b-items-->
-
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <div class="b-items__cell">
+        <div class="b-items__cars-one-img">
+          <img class='img-responsive' src="assets/media/260x230/ferrariTable.jpg" alt='ferrari'/>
+          <span class="b-items__cars-one-img-type m-listing">NE LISTING</span>
+        </div>
+        <div class="b-items__cell-info">
+          <div class="s-lineDownLeft b-items__cell-info-title">
+            <h2 class=""><a href="detail.html">2015 Ferrari LaFerrar</a></h2>
+          </div>
+          <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
+          <div>
+            <div class="row m-smallPadding">
+              <div class="col-xs-5">
+                <span class="b-items__cars-one-info-title">Body Style:</span>
+                <span class="b-items__cars-one-info-title">Mileage:</span>
+                <span class="b-items__cars-one-info-title">Transmission:</span>
+                <span class="b-items__cars-one-info-title">Specs:</span>
+              </div>
+              <div class="col-xs-7">
+                <span class="b-items__cars-one-info-value">Sedan</span>
+                <span class="b-items__cars-one-info-value">35,000 KM</span>
+                <span class="b-items__cars-one-info-value">6-Speed Auto</span>
+                <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
+              </div>
+            </div>
+          </div>
+          <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <div class="b-items__cell">
+        <div class="b-items__cars-one-img">
+          <img class='img-responsive' src="assets/media/260x230/ferrariTable.jpg" alt='ferrari'/>
+          <span class="b-items__cars-one-img-type m-listing">NE LISTING</span>
+        </div>
+        <div class="b-items__cell-info">
+          <div class="s-lineDownLeft b-items__cell-info-title">
+            <h2 class=""><a href="detail.html">2015 Ferrari LaFerrar</a></h2>
+          </div>
+          <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
+          <div>
+            <div class="row m-smallPadding">
+              <div class="col-xs-5">
+                <span class="b-items__cars-one-info-title">Body Style:</span>
+                <span class="b-items__cars-one-info-title">Mileage:</span>
+                <span class="b-items__cars-one-info-title">Transmission:</span>
+                <span class="b-items__cars-one-info-title">Specs:</span>
+              </div>
+              <div class="col-xs-7">
+                <span class="b-items__cars-one-info-value">Sedan</span>
+                <span class="b-items__cars-one-info-value">35,000 KM</span>
+                <span class="b-items__cars-one-info-value">6-Speed Auto</span>
+                <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
+              </div>
+            </div>
+          </div>
+          <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <div class="b-items__cell">
+        <div class="b-items__cars-one-img">
+          <img class='img-responsive' src="assets/media/260x230/chevroletTable.jpg" alt='chevrolet'/>
+          <span class="b-items__cars-one-img-type m-premium">PREMIUM</span>
+        </div>
+        <div class="b-items__cell-info">
+          <div class="s-lineDownLeft b-items__cell-info-title">
+            <h2 class=""><a href="detail.html">Chevrolet Silverado 1500</a></h2>
+          </div>
+          <p>Lorem ipsum dolor sit amet consec let radipisicing elit, sed do eiusmod  ...</p>
+          <div>
+            <div class="row m-smallPadding">
+              <div class="col-xs-5">
+                <span class="b-items__cars-one-info-title">Body Style:</span>
+                <span class="b-items__cars-one-info-title">Mileage:</span>
+                <span class="b-items__cars-one-info-title">Transmission:</span>
+                <span class="b-items__cars-one-info-title">Specs:</span>
+              </div>
+              <div class="col-xs-7">
+                <span class="b-items__cars-one-info-value">Sedan</span>
+                <span class="b-items__cars-one-info-value">35,000 KM</span>
+                <span class="b-items__cars-one-info-value">6-Speed Auto</span>
+                <span class="b-items__cars-one-info-value">2-Passenger, 2-Door</span>
+              </div>
+            </div>
+          </div>
+          <h5 class="b-items__cell-info-price"><span>Price:</span>$29,415</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="b-items__pagination">
+    <div class="b-items__pagination-main">
+      <a data-toggle="modal" data-target="#myModal" href="#" class="m-left"><span class="fa fa-angle-left"></span></a>
+      <span class="m-active"><a href="#">1</a></span>
+      <span><a href="#">2</a></span>
+      <span><a href="#">3</a></span>
+      <span><a href="#">4</a></span>
+      <a href="#" class="m-right"><span class="fa fa-angle-right"></span></a>
+    </div>
+  </div>
 </div>

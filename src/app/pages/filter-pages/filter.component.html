@@ -1,0 +1,180 @@
+<!--TODO in case of table view change classes to  -> class="m-listTableTwo" data-scrolling-animations="true" data-equal-height=".b-items__cell"-->
+<div class="m-listingsTwo" data-scrolling-animations="true">
+  <section class="b-pageHeader">
+    <div class="container">
+      <h1>Auto Listings</h1>
+      <div class="b-pageHeader__search">
+        <h3>Your search returned 28 results</h3>
+      </div>
+    </div>
+  </section><!--b-pageHeader-->
+
+  <div class="b-breadCumbs s-shadow">
+    <div class="container">
+      <a routerLink="/home" class="b-breadCumbs__page">Home</a>
+      <span class="fa fa-angle-right"></span>
+      <a routerLink="/filter-list-view" class="b-breadCumbs__page m-active">Search Results</a>
+    </div>
+  </div><!--b-breadCumbs-->
+
+  <div class="b-infoBar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-xs-12">
+          <div class="b-infoBar__compare">
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle b-infoBar__compare-item" data-toggle='dropdown'><span class="fa fa-clock-o"></span>RECENTLY VIEWED<span class="fa fa-caret-down"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="detail.html">Item</a></li>
+                <li><a href="detail.html">Item</a></li>
+                <li><a href="detail.html">Item</a></li>
+                <li><a href="detail.html">Item</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-xs-12">
+          <div class="b-infoBar__select">
+            <form>
+              <div class="b-infoBar__select-one">
+                <span class="b-infoBar__select-one-title">SELECT VIEW</span>
+                <!--TODO add class -> 'm-active' to m-list or m--table to set active -->
+                <a routerLink="/filter-list-view" routerLinkActive="true" class="m-list m-active"><span class="fa fa-list"></span></a>
+                <a routerLink="/filter-table-view" routerLinkActive="true" class="m-table"><span class="fa fa-table"></span></a>
+              </div>
+              <div class="b-infoBar__select-one">
+                <span class="b-infoBar__select-one-title">SHOW ON PAGE</span>
+                <select name="select1" class="m-select">
+                  <option value="" selected="">10 items</option>
+                </select>
+                <span class="fa fa-caret-down"></span>
+              </div>
+              <div class="b-infoBar__select-one">
+                <span class="b-infoBar__select-one-title">SORT BY</span>
+                <select name="select2" class="m-select">
+                  <option value="" selected="">Last Added</option>
+                </select>
+                <span class="fa fa-caret-down"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--b-infoBar-->
+
+  <div class="b-items">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-4 col-xs-12">
+          <aside class="b-items__aside">
+            <h2 class="s-title">REFINE YOUR SEARCH</h2>
+            <div class="b-items__aside-main">
+              <form>
+                <div class="b-items__aside-main-body">
+                  <div class="b-items__aside-main-body-item">
+                    <label>SELECT A MAKE</label>
+                    <div>
+                      <select name="select1" class="m-select">
+                        <option value="" selected="">Any Make</option>
+                      </select>
+                      <span class="fa fa-caret-down"></span>
+                    </div>
+                  </div>
+                  <div class="b-items__aside-main-body-item">
+                    <label>SELECT A MODEL</label>
+                    <div>
+                      <select name="select1" class="m-select">
+                        <option value="" selected="">Any Make</option>
+                      </select>
+                      <span class="fa fa-caret-down"></span>
+                    </div>
+                  </div>
+                  <div class="b-items__aside-main-body-item">
+                    <label>PRICE RANGE</label>
+                    <div class="slider"></div>
+                    <input type="hidden" name="min" value="100" class="j-min" />
+                    <input type="hidden" name="max" value="1000" class="j-max" />
+                  </div>
+                  <div class="b-items__aside-main-body-item">
+                    <label>VEHICLE TYPE</label>
+                    <div>
+                      <select name="select1" class="m-select">
+                        <option value="" selected="">Any Type</option>
+                      </select>
+                      <span class="fa fa-caret-down"></span>
+                    </div>
+                  </div>
+                  <div class="b-items__aside-main-body-item">
+                    <label>VEHICLE STATUS</label>
+                    <div>
+                      <select name="select1" class="m-select">
+                        <option value="" selected="">Any Status</option>
+                      </select>
+                      <span class="fa fa-caret-down"></span>
+                    </div>
+                  </div>
+                  <div class="b-items__aside-main-body-item">
+                    <label>FUEL TYPE</label>
+                    <div>
+                      <select name="select1" class="m-select">
+                        <option value="" selected="">All Fuel Types</option>
+                      </select>
+                      <span class="fa fa-caret-down"></span>
+                    </div>
+                  </div>
+                </div>
+                <footer class="b-items__aside-main-footer">
+                  <button type="submit" class="btn m-btn">FILTER VEHICLES<span class="fa fa-angle-right"></span></button><br />
+                  <a href="">RESET ALL FILTERS</a>
+                </footer>
+              </form>
+            </div>
+            <div class="b-items__aside-sell">
+              <div class="b-items__aside-sell-img">
+                <h3>SELL YOUR CAR</h3>
+              </div>
+              <div class="b-items__aside-sell-info">
+                <p>
+                  Nam tellus enimds eleifend dignis lsim
+                  biben edum tristique sed metus fusce
+                  Maecenas lobortis.
+                </p>
+                <a href="submit1.html" class="btn m-btn">REGISTER NOW<span class="fa fa-angle-right"></span></a>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <!---->
+        <!---->
+        <!---->
+        <router-outlet></router-outlet>
+        <!--<app-filter-table *ngIf="false"></app-filter-table>-->
+        <!--<app-filter-listed></app-filter-listed>-->
+        <!---->
+        <!---->
+        <!---->
+      </div>
+    </div>
+  </div><!--b-items-->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

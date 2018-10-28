@@ -1,10 +1,11 @@
-import {animate, query, stagger, style, transition, trigger} from '@angular/animations';
+import {animate, query, stagger, state, style, transition, trigger} from '@angular/animations';
 
 export const homeCarousel = [
   trigger('homeCarousel', [
     transition('* <=> *', [
-      style({opacity: 0}),
-      animate('750ms ease-in', style({opacity: 1}))
+      state('in', style({opacity: 1})),
+      style({opacity: 0.4}),
+      animate('600ms ease-in-out', style({opacity: 1}))
     ])
   ])
 ];

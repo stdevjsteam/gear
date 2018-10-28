@@ -5,10 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './search-section.component.html'
 })
 export class SearchSectionComponent implements OnInit {
+  isAdvancedSearchHidden = true;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleAdvancedSearchSection() {
+    this.isAdvancedSearchHidden = !this.isAdvancedSearchHidden;
   }
 
 }

@@ -1,14 +1,14 @@
 <section class="b-slider">
   <div id="carousel" class="slide carousel carousel-fade">
-    <div class="carousel-inner" [@homeCarousel]="currentImageSrc">
+    <div class="carousel-inner" >
 
       <div class="item active">
-        <img [src]="currentImageSrc" alt="sliderImg" />
+        <img [@homeCarousel]="currentImageSrc" [src]="currentImageSrc" alt="sliderImg" />
         <div class="container">
           <div class="carousel-caption b-slider__info">
             <h3>Find your dream vehicle.</h3>
             <h2>Drive your dreams.</h2>
-            <a class="btn m-btn" routerLink="/filter">start now<span class="fa fa-angle-right"></span></a>
+            <a class="btn m-btn" routerLink="/filter-list-view">start now<span class="fa fa-angle-right"></span></a>
           </div>
         </div>
       </div>

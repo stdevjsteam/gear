@@ -32,7 +32,9 @@ export class TopSliderComponent implements OnInit, OnDestroy {
       this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
     } else {
       ++this.currentImgIndex;
-      this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+      setTimeout(() => {
+        this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+      });
     }
   }
 
@@ -44,7 +46,9 @@ export class TopSliderComponent implements OnInit, OnDestroy {
       this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
     } else {
       --this.currentImgIndex;
-      this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+      setTimeout(() => {
+        this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+      });
     }
   }
 
@@ -55,9 +59,11 @@ export class TopSliderComponent implements OnInit, OnDestroy {
         this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
       } else {
         ++this.currentImgIndex;
-        this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+        setTimeout(() => {
+          this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+        });
       }
-    }, 7000);
+    }, 15000);
 
   }
 }
