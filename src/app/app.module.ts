@@ -26,6 +26,8 @@ import { UrgentSaleComponent } from './pages/home/urgent-sale/urgent-sale.compon
 import { CarouselItemComponent } from './pages/home/carousel-item/carousel-item.component';
 import {NguCarouselModule} from '@ngu/carousel';
 import { FilterListedComponent } from './pages/filter-pages/filter-listed/filter-listed.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { FilterListedComponent } from './pages/filter-pages/filter-listed/filter
     UrgentSaleComponent,
     CarouselItemComponent,
     FilterListedComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { FilterListedComponent } from './pages/filter-pages/filter-listed/filter
     AppRoutingModule,
     SharedModule,
     UiModule,
-    NguCarouselModule
+    NguCarouselModule,
+    MatExpansionModule
   ],
   providers: [
     CookieService,

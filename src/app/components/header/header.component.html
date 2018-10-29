@@ -61,20 +61,20 @@
               <li class="dropdown">
                 <a routerLink="/home">Home</a>
               </li>
-              <li><a href="about.html">About</a></li>
+              <li><a routerLink="/about">About</a></li>
               <li>
-                <a href="blog.html">Blog</a>
+                <a routerLink="/blog/posts">Blog</a>
               </li>
               <li>
-                <a href="contacts.html">Contact</a>
+                <a routerLink="/contacts">Contact</a>
               </li>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle='dropdown'>My profile <span class="fa fa-caret-down"></span></a>
                 <ul class="dropdown-menu h-nav">
-                  <li><a href="account-information.html">Account information</a></li>
-                  <li><a href="favourites.html">Favourites</a></li>
-                  <li><a href="own-adds.html">Own ads</a></li>
-                  <li><a href="#">Sign out</a></li>
+                  <li><a routerLink="/account-information">Account information</a></li>
+                  <li><a routerLink="/favourites">Favourites</a></li>
+                  <li><a routerLink="/own-adds">Own ads</a></li>
+                  <li><a (click)="signOut()">Sign out</a></li>
                 </ul>
               </li>
             </ul>

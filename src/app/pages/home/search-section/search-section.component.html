@@ -65,7 +65,7 @@
           </div>
 
           <!--ADVANCED-SEARCH-->
-          <app-advanced-search [hidden]="isAdvancedSearchHidden"></app-advanced-search>
+          <app-advanced-search *ngIf="!isAdvancedSearchHidden"></app-advanced-search>
           <!--ADVANCED-SEARCH-->
 
         </div>
