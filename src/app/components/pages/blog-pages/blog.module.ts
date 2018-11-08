@@ -4,8 +4,8 @@ import { ArticleComponent } from './article/article.component';
 import {BlogComponent} from './blog.component';
 import {RouterModule, Routes} from '@angular/router';
 import { BlogpostsComponent } from './blogposts/blogposts.component';
-import {PageHeaderComponent} from '../../components/page-header/page-header.component';
-import {SharedModule} from '../../../shared/modules/shared/shared.module';
+import {PageHeaderComponent} from '../../page-header/page-header.component';
+import {SharedModule} from '../../../../shared/modules/shared/shared.module';
 
 const routes: Routes = [
   {

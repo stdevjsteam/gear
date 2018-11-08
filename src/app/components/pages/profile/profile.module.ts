@@ -5,7 +5,7 @@ import {FavouritesComponent} from './favourites/favourites.component';
 import {AccountInformationComponent} from './account-information/account-information.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ProfileComponent} from './profile.component';
-import {SharedModule} from '../../../shared/modules/shared/shared.module';
+import {SharedModule} from '../../../../shared/modules/shared/shared.module';
 
 const routes: Routes = [
   {

@@ -8,26 +8,28 @@ import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PagePreloaderComponent} from './components/page-preloader/page-preloader.component';
-import {HomeComponent} from './pages/home/home.component';
-import {FilterComponent} from './pages/filter-pages/filter.component';
-import {FilterTableComponent} from './pages/filter-pages/filter-table/filter-table.component';
+import {HomeComponent} from './components/pages/home/home.component';
+import {FilterComponent} from './components/pages/filter-pages/filter.component';
+import {FilterTableComponent} from './components/pages/filter-pages/filter-table/filter-table.component';
 import {CookieService} from 'ngx-cookie-service';
-import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
-import {AboutComponent} from './pages/about/about.component';
+import {PageNotFoundComponent} from './components/pages/page-not-found/page-not-found.component';
+import {AboutComponent} from './components/pages/about/about.component';
 import {SharedModule} from '../shared/modules/shared/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { TopSliderComponent } from './pages/home/top-slider/top-slider.component';
-import { SearchSectionComponent } from './pages/home/search-section/search-section.component';
-import { VehicleTypeComponent } from './pages/home/search-section/vehicle-type/vehicle-type.component';
+import { TopSliderComponent } from './components/pages/home/top-slider/top-slider.component';
+import { SearchSectionComponent } from './components/pages/home/search-section/search-section.component';
+import { VehicleTypeComponent } from './components/pages/home/search-section/vehicle-type/vehicle-type.component';
 import {UiModule} from '../shared/search-section-svgs/ui.module';
-import { AdvancedSearchComponent } from './pages/home/search-section/advanced-search/advanced-search.component';
-import { TopVehiclesComponent } from './pages/home/top-vehicles/top-vehicles.component';
-import { UrgentSaleComponent } from './pages/home/urgent-sale/urgent-sale.component';
-import { CarouselItemComponent } from './pages/home/carousel-item/carousel-item.component';
+import { AdvancedSearchComponent } from './components/pages/home/search-section/advanced-search/advanced-search.component';
+import { TopVehiclesComponent } from './components/pages/home/top-vehicles/top-vehicles.component';
+import { UrgentSaleComponent } from './components/pages/home/urgent-sale/urgent-sale.component';
+import { CarouselItemComponent } from './components/pages/home/carousel-item/carousel-item.component';
 import {NguCarouselModule} from '@ngu/carousel';
-import { FilterListedComponent } from './pages/filter-pages/filter-listed/filter-listed.component';
+import { FilterListedComponent } from './components/pages/filter-pages/filter-listed/filter-listed.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { ContactsComponent } from './pages/contacts/contacts.component';
+import { ContactsComponent } from './components/pages/contacts/contacts.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DirectiveModule} from '../directives/directive.module';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule,
     SharedModule,

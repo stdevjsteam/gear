@@ -1,12 +1,12 @@
 import {AfterContentChecked, Component} from '@angular/core';
-import {RouterDataService} from '../../services/router-data.service';
+import {RouterDataService} from '../../../services/router-data.service';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
   providers: [RouterDataService]
 })
-export class BlogComponent implements AfterContentChecked {
+export class ProfileComponent implements AfterContentChecked {
   data: { h1: string, h3: string, className: string, routerLink: string };
 
   constructor(private dataService: RouterDataService) {

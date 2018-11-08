@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import {AuthorizationService} from '../../services/authorization.service';
+import {AuthorizationService} from '../../../services/authorization.service';
 import { AuthorizationComponent } from './authorization.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DirectiveModule} from '../../../../directives/directive.module';
 
 const routes: Routes = [
   {path: '', component: AuthorizationComponent, children: [
@@ -27,6 +29,9 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    DirectiveModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ],
   providers: [

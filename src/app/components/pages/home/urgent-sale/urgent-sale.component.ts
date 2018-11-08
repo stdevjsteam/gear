@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Carousel} from '../../../../shared/carousel';
+import {Carousel} from '../../../../../shared/carousel';
 
 @Component({
   selector: 'app-urgent-sale',

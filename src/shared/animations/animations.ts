@@ -2,10 +2,13 @@ import {animate, query, stagger, state, style, transition, trigger} from '@angul
 
 export const homeCarousel = [
   trigger('homeCarousel', [
-    transition('* <=> *', [
-      state('in', style({opacity: 1})),
-      style({opacity: 0.4}),
-      animate('600ms ease-in-out', style({opacity: 1}))
+    transition('* => *', [
+      style({
+        opacity: 0.2
+      }),
+      animate('.4s', style({
+        opacity: 1
+      }))
     ])
   ])
 ];

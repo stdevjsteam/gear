@@ -1,10 +1,13 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+import {homeCarousel} from '../../../../../shared/animations/animations';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+  selector: 'app-top-slider',
+  templateUrl: './top-slider.component.html',
+  animations: homeCarousel
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class TopSliderComponent implements OnInit, OnDestroy {
+
   imagesContainer: Array<string> = ['assets/media/main-slider/1.jpg', 'assets/media/main-slider/2.jpg', 'assets/media/main-slider/3.jpg'];
   currentImageSrc: string = this.imagesContainer[0];
   private currentImgIndex = 0;
@@ -16,44 +19,52 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
   }
+
   ngOnDestroy() {
     clearInterval(this.intervalID);
   }
 
   nextImage() {
+    clearInterval(this.intervalID);
+    this.setAnimationInterval();
     if (this.currentImgIndex === this.imagesContainer.length - 1) {
       this.currentImgIndex = 0;
+      this.currentImageSrc = undefined;
       this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
     } else {
       ++this.currentImgIndex;
-      this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+        this.currentImageSrc = undefined;
+        this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
     }
-    clearInterval(this.intervalID);
-    this.setAnimationInterval();
   }
 
   prevImage() {
+    clearInterval(this.intervalID);
+    this.setAnimationInterval();
     if (this.currentImgIndex === 0) {
       this.currentImgIndex = this.imagesContainer.length - 1;
+      this.currentImageSrc = undefined;
       this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
     } else {
       --this.currentImgIndex;
-      this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+        this.currentImageSrc = undefined;
+        this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
     }
-    clearInterval(this.intervalID);
-    this.setAnimationInterval();
   }
 
   setAnimationInterval() {
     this.intervalID = setInterval(() => {
       if (this.currentImgIndex === this.imagesContainer.length - 1) {
         this.currentImgIndex = 0;
+        this.currentImageSrc = undefined;
         this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
       } else {
         ++this.currentImgIndex;
-        this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
+          this.currentImageSrc = undefined;
+          this.currentImageSrc = this.imagesContainer[this.currentImgIndex];
       }
-    }, 7000);
-  }
+    }, 15000);
 
+  }
 }
+

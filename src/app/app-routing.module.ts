@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from './pages/home/home.component';
-import {FilterComponent} from './pages/filter-pages/filter.component';
-import {FilterTableComponent} from './pages/filter-pages/filter-table/filter-table.component';
-import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
-import {AboutComponent} from './pages/about/about.component';
-import {FilterListedComponent} from './pages/filter-pages/filter-listed/filter-listed.component';
-import {ContactsComponent} from './pages/contacts/contacts.component';
+import {HomeComponent} from './components/pages/home/home.component';
+import {FilterComponent} from './components/pages/filter-pages/filter.component';
+import {FilterTableComponent} from './components/pages/filter-pages/filter-table/filter-table.component';
+import {PageNotFoundComponent} from './components/pages/page-not-found/page-not-found.component';
+import {AboutComponent} from './components/pages/about/about.component';
+import {FilterListedComponent} from './components/pages/filter-pages/filter-listed/filter-listed.component';
+import {ContactsComponent} from './components/pages/contacts/contacts.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -19,9 +19,9 @@ const appRoutes: Routes = [
       {path: 'filter-table-view', component: FilterTableComponent},
       {path: 'filter-list-view', component: FilterListedComponent},
     ]},
-  {path: '', loadChildren: './pages/authorization/auth.module#AuthModule'},
-  {path: 'blog', loadChildren: './pages/blog-pages/blog.module#BlogModule'},
-  {path: '', loadChildren: './pages/profile/profile.module#ProfileModule'},
+  {path: '', loadChildren: './components/pages/authorization/auth.module#AuthModule'},
+  {path: 'blog', loadChildren: './components/pages/blog-pages/blog.module#BlogModule'},
+  {path: '', loadChildren: './components/pages/profile/profile.module#ProfileModule'},
   { path: '**', component: PageNotFoundComponent }
 ];
 

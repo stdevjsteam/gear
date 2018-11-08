@@ -1,0 +1,34 @@
+<header class="b-contacts__form-header s-lineDownLeft">
+  <h2 class="s-titleDet">Sign up</h2>
+</header>
+<form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)" id="contactForm" novalidate="" class="s-form">
+
+    <input toggleErrClass [formControlElement]="signUpForm.get('email')" type="text" placeholder="EMAIL ADDRESS" value=""
+           name="email" id="user-email">
+    <ng-container *ngFor="let error of validationMessages.email">
+      <p toggleErrClass [formControlElement]="signUpForm.get('email')" class="error-message" *ngIf="signUpForm.get('email').hasError(error.type)">{{error.message}}</p>
+    </ng-container>
+
+    <input toggleErrClass [formControlElement]="signUpForm.get('password')" type="password" placeholder="PASSWORD"
+           value="" name="password" id="user-password">
+    <ng-container *ngFor="let error of validationMessages.password">
+      <p class="error-message" *ngIf="signUpForm.get('password').hasError(error.type)">{{error.message}}</p>
+    </ng-container>
+
+    <input toggleErrClass [formControlElement]="signUpForm.get('passwordConfirm')" type="password"
+           placeholder="CONFIRM PASSWORD" value="" name="confirm-password" id="confirm-password">
+    <ng-container *ngFor="let error of validationMessages.confirm_password">
+      <p class="error-message" *ngIf="signUpForm.get('passwordConfirm').hasError(error.type)">{{error.message}}</p>
+    </ng-container>
+
+    <div class="row form-links">
+    </div>
+    <div class="row form-links form-align">
+      <div class="col-lg-6">
+        <a routerLink="/sign-in">Already have an account?</a>
+      </div>
+      <div class="col-lg-6 text-right">
+        <button type="submit" class="btn m-btn">SIGN UP<span class="fa fa-angle-right"></span></button>
+      </div>
+    </div>
+</form>
