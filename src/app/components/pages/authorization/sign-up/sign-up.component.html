@@ -1,24 +1,24 @@
 <header class="b-contacts__form-header s-lineDownLeft">
   <h2 class="s-titleDet">Sign up</h2>
 </header>
-<form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)" id="contactForm" novalidate="" class="s-form">
+<form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)" id="sign-up-form" class="s-form">
 
-    <input toggleErrClass [formControlElement]="signUpForm.get('email')" type="text" placeholder="EMAIL ADDRESS" value=""
+    <input toggleErrClass [control]="signUpForm.get('email')" [errClass]="'invalid'" formControlName="email" type="text" placeholder="EMAIL ADDRESS"
            name="email" id="user-email">
     <ng-container *ngFor="let error of validationMessages.email">
-      <p toggleErrClass [formControlElement]="signUpForm.get('email')" class="error-message" *ngIf="signUpForm.get('email').hasError(error.type)">{{error.message}}</p>
+      <p class="error-message" *ngIf="this.signUpForm.get('email').hasError(error.type) && this.signUpForm.touched && this.signUpForm.dirty || this.signUpForm.pending">{{error.message}}</p>
     </ng-container>
 
-    <input toggleErrClass [formControlElement]="signUpForm.get('password')" type="password" placeholder="PASSWORD"
-           value="" name="password" id="user-password">
+    <input toggleErrClass [control]="signUpForm.get('password')" [errClass]="'invalid'" formControlName="password" type="password" placeholder="PASSWORD"
+           name="password" id="user-password">
     <ng-container *ngFor="let error of validationMessages.password">
-      <p class="error-message" *ngIf="signUpForm.get('password').hasError(error.type)">{{error.message}}</p>
+      <p class="error-message" *ngIf="this.signUpForm.get('password').hasError(error.type) && this.signUpForm.touched && this.signUpForm.dirty || this.signUpForm.pending">{{error.message}}</p>
     </ng-container>
 
-    <input toggleErrClass [formControlElement]="signUpForm.get('passwordConfirm')" type="password"
-           placeholder="CONFIRM PASSWORD" value="" name="confirm-password" id="confirm-password">
+    <input toggleErrClass [control]="signUpForm.get('passwordConfirm')" [errClass]="'invalid'" type="password"
+           placeholder="CONFIRM PASSWORD"formControlName="passwordConfirm" name="confirm-password" id="confirm-password">
     <ng-container *ngFor="let error of validationMessages.confirm_password">
-      <p class="error-message" *ngIf="signUpForm.get('passwordConfirm').hasError(error.type)">{{error.message}}</p>
+      <p class="error-message" *ngIf="this.signUpForm.get('passwordConfirm').hasError(error.type) && this.signUpForm.touched && this.signUpForm.dirty || this.signUpForm.pending">{{error.message}}</p>
     </ng-container>
 
     <div class="row form-links">

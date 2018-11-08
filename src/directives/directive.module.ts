@@ -1,12 +1,15 @@
 import {NgModule} from '@angular/core';
 import {ErrorMessageClassDirective} from './error-message-class.directive';
+// import {ToggleErrTextDirective} from './toggle-err-text.directive';
 
 @NgModule({
   declarations: [
-    ErrorMessageClassDirective
+    ErrorMessageClassDirective,
+    // ToggleErrTextDirective
   ],
   exports: [
-    ErrorMessageClassDirective
+    ErrorMessageClassDirective,
+    // ToggleErrTextDirective
   ]
 })
 export class DirectiveModule {

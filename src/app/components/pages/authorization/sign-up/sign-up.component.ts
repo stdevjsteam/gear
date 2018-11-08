@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {emailPattern, signUpValidationMessages} from '../validation-helper-model';
 
 @Component({
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html'
 })

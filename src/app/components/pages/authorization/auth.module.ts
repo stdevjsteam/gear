@@ -32,6 +32,7 @@ const routes: Routes = [
     DirectiveModule,
     ReactiveFormsModule,
     FormsModule,
+    DirectiveModule,
     RouterModule.forChild(routes)
   ],
   providers: [

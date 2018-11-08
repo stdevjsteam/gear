@@ -1,27 +1,31 @@
-import {Directive, DoCheck, ElementRef, HostBinding, Input, OnChanges, Renderer2} from '@angular/core';
+import {Directive, DoCheck, ElementRef, HostBinding, Input, Renderer2} from '@angular/core';
 import {AbstractControl} from '@angular/forms';
+import {NgClass} from '@angular/common';
 
 @Directive({
-  selector: '[toggleErrClass]'
+  selector: '[toggleErrClass]',
+  providers: [NgClass]
 })
-export class ErrorMessageClassDirective implements OnChanges {
+export class ErrorMessageClassDirective implements DoCheck {
 
   @Input()
-  formControlElement: AbstractControl;
+  control: AbstractControl;
+
+  @Input()
+  errClass: string;
 
   @HostBinding('class.className') className;
 
   constructor(private renderer: Renderer2, private hostElement: ElementRef) {
   }
 
-  ngOnChanges() {
-    if (this.formControlElement.errors && this.formControlElement.touched) {
-      this.renderer.addClass(this.hostElement.nativeElement, 'invalid');
-    } else if (this.formControlElement.valid) {
-      this.renderer.removeClass(this.hostElement.nativeElement, 'invalid');
+  ngDoCheck(): void {
+    if (this.control.errors && this.control.touched && this.control.dirty || this.control.pending) {
+      this.renderer.addClass(this.hostElement.nativeElement, this.errClass);
+    } else if (this.control.valid) {
+      this.renderer.removeClass(this.hostElement.nativeElement, this.errClass);
     } else {
-      this.formControlElement.markAsUntouched();
+      this.control.markAsUntouched();
     }
   }
 }
-

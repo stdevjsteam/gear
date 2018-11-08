@@ -62,7 +62,8 @@ import {DirectiveModule} from '../directives/directive.module';
     SharedModule,
     UiModule,
     NguCarouselModule,
-    MatExpansionModule
+    MatExpansionModule,
+    DirectiveModule
   ],
   providers: [
     CookieService,
