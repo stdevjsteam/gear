@@ -37,7 +37,7 @@ export const resetPassValidationMessages = {
   'password': [
     {type: 'required', message: 'Please enter your password'},
     {type: 'minlength', message: 'Password must be at least 6 characters long'},
-    {type: 'wrong-password', message: 'Your current password are wrong'},
+    {type: 'areEqual', message: 'Password mismatch'},
   ]
 };
 

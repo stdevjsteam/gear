@@ -3,10 +3,10 @@
 </header>
 <div id="success"></div>
 <form id="signInForm" [formGroup]="loginForm" (ngSubmit)="signIn(loginForm.value)" novalidate class="s-form">
-  <input toggleErrClass [control]="loginForm.get('email')" [errClass]="'invalid'" formControlName="email" type="text" placeholder="EMAIL ADDRESS"
+  <input toggleErrClass [control]="loginForm.get('username')" [errClass]="'invalid'" formControlName="username" type="text" placeholder="EMAIL ADDRESS OR USER NAME"
          name="email" id="user-email">
   <ng-container *ngFor="let error of validationMessages.email">
-    <p class="error-message" *ngIf="this.loginForm.get('email').hasError(error.type) && this.loginForm.touched && this.loginForm.dirty || this.loginForm.pending">{{error.message}}</p>
+    <p class="error-message" *ngIf="this.loginForm.get('username').hasError(error.type) && this.loginForm.touched && this.loginForm.dirty || this.loginForm.pending">{{error.message}}</p>
   </ng-container>
   <input toggleErrClass [control]="loginForm.get('password')" [errClass]="'invalid'" formControlName="password" type="password" placeholder="PASSWORD"
          name="password" id="user-password">

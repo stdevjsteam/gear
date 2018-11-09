@@ -15,10 +15,10 @@
       <p class="error-message" *ngIf="this.signUpForm.get('password').hasError(error.type) && this.signUpForm.touched && this.signUpForm.dirty || this.signUpForm.pending">{{error.message}}</p>
     </ng-container>
 
-    <input toggleErrClass [control]="signUpForm.get('passwordConfirm')" [errClass]="'invalid'" type="password"
-           placeholder="CONFIRM PASSWORD"formControlName="passwordConfirm" name="confirm-password" id="confirm-password">
+    <input toggleErrClass [control]="signUpForm.get('repeat_password')" [errClass]="'invalid'" type="password"
+           placeholder="CONFIRM PASSWORD" formControlName="repeat_password" name="confirm-password" id="confirm-password">
     <ng-container *ngFor="let error of validationMessages.confirm_password">
-      <p class="error-message" *ngIf="this.signUpForm.get('passwordConfirm').hasError(error.type) && this.signUpForm.touched && this.signUpForm.dirty || this.signUpForm.pending">{{error.message}}</p>
+      <p class="error-message" *ngIf="this.signUpForm.get('repeat_password').hasError(error.type) && this.signUpForm.touched && this.signUpForm.dirty || this.signUpForm.pending">{{error.message}}</p>
     </ng-container>
 
     <div class="row form-links">

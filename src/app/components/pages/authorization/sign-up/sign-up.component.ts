@@ -34,7 +34,7 @@ export class SignUpComponent implements OnInit {
       password: ['', {
         validators: Validators.compose([Validators.required, Validators.minLength(6)])
       }],
-      passwordConfirm: ['', {
+      repeat_password: ['', {
         validators: Validators.compose([Validators.required, Validators.minLength(6)])
       }]
     }, {
@@ -59,8 +59,8 @@ export class SignUpComponent implements OnInit {
   }
 
   private static passwordMatchValidator(g: FormGroup): null | void {
-    return g.get('password').value === g.get('passwordConfirm').value
-      ? null : g.get('passwordConfirm').setErrors({areEqual: true});
+    return g.get('password').value === g.get('repeat_password').value
+      ? null : g.get('repeat_password').setErrors({areEqual: true});
   }
 
 }

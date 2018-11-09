@@ -20,8 +20,11 @@ export class ResetPasswordComponent implements OnInit {
 
   private createForm() {
     this.resetPassForm = this.builder.group({
-      current_password: [null, Validators.compose([Validators.required, Validators.minLength(6)])],
-      new_password: [null, Validators.compose([Validators.required, Validators.minLength(6)])]
+      password: [null, Validators.compose([Validators.required, Validators.minLength(6)])],
+      repeat_password: [null, Validators.compose([Validators.required, Validators.minLength(6)])]
+    }, {
+      validator: [ResetPasswordComponent.passwordMatchValidator],
+      updateOn: 'submit'
     });
   }
 
@@ -37,6 +40,11 @@ export class ResetPasswordComponent implements OnInit {
         });
       return;
     }
+  }
+
+  private static passwordMatchValidator(g: FormGroup): null | void {
+    return g.get('password').value === g.get('repeat_password').value
+      ? null : g.get('repeat_password').setErrors({areEqual: true});
   }
 
 }

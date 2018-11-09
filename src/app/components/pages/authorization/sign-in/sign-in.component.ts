@@ -20,7 +20,7 @@ export class SignInComponent implements OnInit {
 
   private createForm(): void {
     this.loginForm = this.formBuilder.group({
-      email: ['', {
+      username: ['', {
         validators: Validators.compose([Validators.required, Validators.pattern(emailPattern)])
       }],
       password: ['', {
