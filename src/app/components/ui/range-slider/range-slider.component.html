@@ -1,0 +1,8 @@
+<ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options">
+  <ng-template #tooltipTemplate let-tooltip="tooltip" let-placement="placement" let-content="content">
+    <!-- TODO: provide tooltip around the content.
+         {{tooltip}} will bind to the tooltip text
+         {{placement}} will bind to the tooltip placement ('top', 'bottom', 'right', 'left') -->
+    <div class="h-100">{{content}}</div>
+  </ng-template>
+</ng5-slider>
