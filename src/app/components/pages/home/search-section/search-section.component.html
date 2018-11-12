@@ -41,7 +41,14 @@
             <div class="m-secondSelects b-search__main-form-range">
               <label>PRICE RANGE</label>
               <!--RANGE COMPONENT-->
-              <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+              <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options">
+                <ng-template #tooltipTemplate let-tooltip="tooltip" let-placement="placement" let-content="content">
+                  <!-- TODO: provide tooltip around the content.
+                       {{tooltip}} will bind to the tooltip text
+                       {{placement}} will bind to the tooltip placement ('top', 'bottom', 'right', 'left') -->
+                  <div>{{content}}</div>
+                </ng-template>
+              </ng5-slider>
               <!--RANGE COMPONENT-->
             </div>
           </div>
