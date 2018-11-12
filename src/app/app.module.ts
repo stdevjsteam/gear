@@ -33,6 +33,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DirectiveModule} from '../directives/directive.module';
 import {NgSelectModule} from '@ng-select/ng-select';
 import { NgSelectComponent } from './components/ui/ng-select/ng-select.component';
+import { RangeSliderComponent } from './components/ui/range-slider/range-slider.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { NgSelectComponent } from './components/ui/ng-select/ng-select.component
     CarouselItemComponent,
     FilterListedComponent,
     ContactsComponent,
-    NgSelectComponent
+    NgSelectComponent,
+    RangeSliderComponent
   ],
   imports: [
     BrowserModule,
