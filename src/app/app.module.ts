@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import { Ng5SliderModule } from 'ng5-slider';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {TokenInterceptorService} from './services/token-interceptor.service';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
@@ -15,7 +15,7 @@ import {FilterTableComponent} from './components/pages/filter-pages/filter-table
 import {CookieService} from 'ngx-cookie-service';
 import {PageNotFoundComponent} from './components/pages/page-not-found/page-not-found.component';
 import {AboutComponent} from './components/pages/about/about.component';
-import {SharedModule} from '../shared/modules/shared/shared.module';
+import {SharedModule} from '../shared/modules/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TopSliderComponent } from './components/pages/home/top-slider/top-slider.component';
 import { SearchSectionComponent } from './components/pages/home/search-section/search-section.component';
@@ -34,6 +34,7 @@ import {DirectiveModule} from '../directives/directive.module';
 import {NgSelectModule} from '@ng-select/ng-select';
 import { NgSelectComponent } from './components/ui/ng-select/ng-select.component';
 import { RangeSliderComponent } from './components/ui/range-slider/range-slider.component';
+import {MyTranslateRootModule} from '../shared/modules/my-translate-root.module';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { RangeSliderComponent } from './components/ui/range-slider/range-slider.
     UiModule,
     NguCarouselModule,
     MatExpansionModule,
-    DirectiveModule
+    DirectiveModule,
+    MyTranslateRootModule
   ],
   providers: [
     CookieService,

@@ -17,7 +17,7 @@ import { MinicarComponent } from './minicar/minicar.component';
     CoupeComponent,
     ConvertibleComponent,
     SedanComponent,
-    MinicarComponent
+    MinicarComponent,
   ],
   exports: [
     PickupComponent,

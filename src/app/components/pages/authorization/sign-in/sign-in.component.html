@@ -1,34 +1,34 @@
 <header class="b-contacts__form-header s-lineDownLeft">
-  <h2 class="s-titleDet">Sign in</h2>
+  <h2 class="s-titleDet">{{'AUTH.SIGN_IN' | translate}}</h2>
 </header>
 <div id="success"></div>
 <form id="signInForm" [formGroup]="loginForm" (ngSubmit)="signIn(loginForm.value)" novalidate class="s-form">
-  <input toggleErrClass [control]="loginForm.get('username')" [errClass]="'invalid'" formControlName="username" type="text" placeholder="EMAIL ADDRESS OR USER NAME"
+  <input toggleErrClass [control]="loginForm.get('username')" [errClass]="'invalid'" formControlName="username" type="text" [placeholder]="'AUTH.EMAIL' | translate"
          name="email" id="user-email">
   <ng-container *ngFor="let error of validationMessages.email">
-    <p class="error-message" *ngIf="this.loginForm.get('username').hasError(error.type) && this.loginForm.touched && this.loginForm.dirty || this.loginForm.pending">{{error.message}}</p>
+    <p class="error-message" *ngIf="this.loginForm.get('username').hasError(error.type) && this.loginForm.touched && this.loginForm.dirty || this.loginForm.pending">{{error.message | translate}}</p>
   </ng-container>
-  <input toggleErrClass [control]="loginForm.get('password')" [errClass]="'invalid'" formControlName="password" type="password" placeholder="PASSWORD"
+  <input toggleErrClass [control]="loginForm.get('password')" [errClass]="'invalid'" formControlName="password" type="password" [placeholder]="'AUTH.PASSWORD' | translate"
          name="password" id="user-password">
   <ng-container *ngFor="let error of validationMessages.password">
-    <p class="error-message" *ngIf="this.loginForm.get('password').hasError(error.type) && this.loginForm.touched && this.loginForm.dirty || this.loginForm.pending">{{error.message}}</p>
+    <p class="error-message" *ngIf="this.loginForm.get('password').hasError(error.type) && this.loginForm.touched && this.loginForm.dirty || this.loginForm.pending">{{error.message | translate}}</p>
   </ng-container>
   <div class="row form-links">
     <div class="col-lg-6 col-sm-12 form-align">
       <input type="checkbox" name="check1" id="check1">
       <label class="s-submitCheckLabel" for="check1"><span class="fa fa-check"></span></label>
-      <label class="s-submitCheck" for="check1">Remember me</label>
+      <label class="s-submitCheck" for="check1">{{'AUTH.REMEMBER_ME' | translate}}</label>
     </div>
     <div class="col-lg-6 col-sm-12 text-right">
-      <button type="submit" class="btn m-btn">SIGN IN<span class="fa fa-angle-right"></span></button>
+      <button type="submit" class="btn m-btn">{{'AUTH.SIGN_IN' | translate}}<span class="fa fa-angle-right"></span></button>
     </div>
   </div>
   <div class="row form-links">
     <div class="col-lg-6 col-sm-12">
-      <a routerLink="/sign-up">Don't have an account?</a>
+      <a routerLink="/sign-up">{{'AUTH.DONT_HAVE_ACCOUNT' | translate}}</a>
     </div>
     <div class="col-lg-6 col-sm-12 text-right">
-      <a routerLink="/forgot-password">Forgot password?</a>
+      <a routerLink="/forgot-password">{{'AUTH.FORGOT_PASSWORD' |translate}}</a>
     </div>
   </div>
 </form>
