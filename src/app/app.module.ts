@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
+import { Ng5SliderModule } from 'ng5-slider';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TokenInterceptorService} from './services/token-interceptor.service';
 import {HeaderComponent} from './components/header/header.component';
@@ -30,6 +31,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ContactsComponent } from './components/pages/contacts/contacts.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DirectiveModule} from '../directives/directive.module';
+import {NgSelectModule} from '@ng-select/ng-select';
+import { NgSelectComponent } from './components/ui/ng-select/ng-select.component';
 
 @NgModule({
   declarations: [
@@ -50,13 +53,16 @@ import {DirectiveModule} from '../directives/directive.module';
     UrgentSaleComponent,
     CarouselItemComponent,
     FilterListedComponent,
-    ContactsComponent
+    ContactsComponent,
+    NgSelectComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    NgSelectModule,
+    Ng5SliderModule,
     HttpClientModule,
     AppRoutingModule,
     SharedModule,

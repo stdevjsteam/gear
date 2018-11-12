@@ -1,0 +1,15 @@
+<ng-select [items]="items"
+           [placeholder]="placehold"
+           bindLabel="name"
+           bindValue="id"
+           [loading]="loading"
+           [virtualScroll]="true"
+           [disabled]="disabled"
+           [searchable]="searchable"
+           [multiple]="multiple"
+           [clearable]="clearable"
+           [(ngModel)]="selectValue"
+           (open)="onOpenHandler()"
+           (change)="onChangeHandler()"
+           (close)="onCloseHandler()">
+</ng-select>

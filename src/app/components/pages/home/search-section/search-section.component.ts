@@ -1,4 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
+import { Options } from 'ng5-slider';
 
 @Component({
   selector: 'app-search-section',
@@ -6,15 +7,21 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 })
 export class SearchSectionComponent implements OnInit, OnDestroy {
   isAdvancedSearchHidden = true;
+  minValue = 0;
+  maxValue = 10;
+  options: Options = {
+    floor: 0,
+    ceil: 100,
+    step: 1,
+    noSwitching: true
+  };
 
   constructor() { }
 
   ngOnInit() {
-    console.log('iniiiiiiiiiit');
   }
 
   ngOnDestroy() {
-    console.log('destrooooy');
   }
 
   toggleAdvancedSearchSection() {
