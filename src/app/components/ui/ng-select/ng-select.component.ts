@@ -22,8 +22,8 @@ export class NgSelectComponent implements ControlValueAccessor, AfterViewInit {
   @Input() onCloseEvent;
   @Input() onChangeEvent;
   @Input() multiple: boolean;
-  @Input() searchable = false;
-  @Input() clearable = false;
+  @Input() searchable = true;
+  @Input() clearable = true;
 
   get selectValue() {
     return this._selectValue;
