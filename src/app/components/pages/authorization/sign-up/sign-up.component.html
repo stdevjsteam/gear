@@ -1,7 +1,7 @@
 <header class="b-contacts__form-header s-lineDownLeft">
-  <h2 class="s-titleDet">{{'AUTH.SIGN_UP' | translate}}</h2>
+    <h2 class="s-titleDet">{{'AUTH.SIGN_UP' | translate}}</h2>
 </header>
-<form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)" id="sign-up-form" class="s-form">
+<!--<form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)" id="sign-up-form" class="s-form">
     <div class="text-field">
         <input toggleErrClass [control]="signUpForm.get('email')" [errClass]="'invalid'" formControlName="email" type="text" [placeholder]="'AUTH.EMAIL' | translate"
                name="email" id="user-email">
@@ -35,5 +35,24 @@
       <div class="col-lg-6 text-right">
         <button type="submit" class="btn m-btn">{{'AUTH.SIGN_UP' | translate}}<span class="fa fa-angle-right"></span></button>
       </div>
+    </div>
+</form>-->
+
+<!-- Please show below included form when
+
+ 1․ the user will finish the sign up process and there will be the need to show info message
+ 2. when the activation link will be expired and need to inform user about it and give ability to choose "ressend" or "cancel" it
+
+ -->
+
+<form action="" class="s-form">
+    <p class="form-hint">Ձեր գրանցումը հաջողությամբ ավարտվել է: Գրանցումն հաստատելու համար խնդրում ենք սեղմել էլ.փոստին ուղարկված հաստատման հղումը:</p>
+    <div class="row form-links form-align">
+        <div class="col-lg-6">
+            <a routerLink="/sign-in">Չեղարկել</a>
+        </div>
+        <div class="col-lg-6 text-right">
+            <button type="submit" class="btn m-btn">Ուղարկել<span class="fa fa-angle-right"></span></button>
+        </div>
     </div>
 </form>
