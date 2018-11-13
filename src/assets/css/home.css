@@ -593,39 +593,6 @@ a.m-langLink{
     margin-top: 15px;
     margin-left: 15px;
 }
-/*
-.ui-slider-handle{
-    width:20px;
-    height:20px;
-    position: absolute;
-    top:-5px;
-    border-radius: 100%;
-    border: 2px solid #eee;
-    text-align: center;
-}*/
-
-.ui-slider-handle:after{
-    width:12px;
-    height:12px;
-    display: inline-block;
-    content:'';
-    border-radius: 100%;
-    vertical-align: text-top;
-
-}
-
-.ui-slider-handle:last-of-type{
-    margin-left: -20px;
-}
-
-.ui-slider-handle:focus{
-    outline: none;
-}
-
-.ui-widget-header{
-    height:100%;
-    position:absolute;
-}
 
 /* Featured */
 .b-featured{

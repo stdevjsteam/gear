@@ -214,10 +214,6 @@ select.m-select + span.fa{
     width:100%;
 }
 
-.b-items__aside-main-body-item .ui-widget-header{
-    border-radius: 20px;
-}
-
 .b-items__aside-main-body-item .ui-slider-handle:before{
     content:' ';
 }
