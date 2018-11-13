@@ -493,6 +493,10 @@ a.m-langLink{
     margin-bottom: 45px;
 }
 
+.b-search__main-form .price-range {
+    padding-top: 70px;
+}
+
 .b-search__main-form .label{
     text-transform: uppercase;
     font: 600 14px 'Open Sans',sans-serif;
@@ -500,6 +504,7 @@ a.m-langLink{
     margin: 11px 0 0 0;
     float:left;
     display: block;
+    line-height: 52px;
 }
 
 .b-search__main-form .price-label {
@@ -564,7 +569,7 @@ a.m-langLink{
 }
 
 .m-index .b-search__main-form-submit {
-    padding-top: 116px;
+    padding-top: 86px;
 }
 
 .m-index .s-submit .s-submitCheckLabel {

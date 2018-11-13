@@ -25,7 +25,7 @@
     display: none;
 }
 
-/*
-.ng5-slider .ng5-slider-bar {
-    background: white!important;
-}*/
+.ng5-slider .ng5-slider-bubble {
+    font-size: 14px!important;
+    color: #6c6c6c!important;
+}
