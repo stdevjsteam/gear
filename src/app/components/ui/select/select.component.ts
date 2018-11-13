@@ -66,6 +66,7 @@ export class SelectComponent implements ControlValueAccessor, AfterViewInit {
   registerOnTouched() {}
 
   onChangeHandler() {
+    console.log(this._selectValue);
   }
 
 }

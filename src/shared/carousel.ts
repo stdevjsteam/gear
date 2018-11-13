@@ -28,8 +28,8 @@ export class Carousel implements OnInit {
     slide: 1,
     speed: 1000,
     interval: {
-      timing: 1000,
-      initialDelay: 2000
+      timing: 5000,
+      initialDelay: 5000
     },
     point: {
       visible: true,

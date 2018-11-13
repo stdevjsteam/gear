@@ -26,6 +26,20 @@ export const carouselLike = [
   ])
 ];
 
+export const navBarCollapse = [
+  trigger('navBarCollapse', [
+    state('true', style({
+      height: '*'
+    })),
+    state('false', style({
+      height: 0
+    })),
+    transition('false <=> true', [
+      animate('.3s cubic-bezier(0.4, 0, 0.2, 1)')
+    ])
+  ])
+];
+
 export const listStagger = [
   trigger('listStagger', [
     transition('* <=> *', [

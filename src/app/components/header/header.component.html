@@ -49,31 +49,31 @@
       <div class="col-sm-9 col-xs-8">
         <div class="b-nav__list">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+            <button type="button" class="navbar-toggle" (click)="toggleMenu()">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
           </div>
-          <div class="collapse navbar-collapse navbar-main-slide" id="nav">
+          <div class="navbar-collapse navbar-main-slide" id="nav" [@navBarCollapse]="menuIsOpened">
             <ul class="navbar-nav-menu">
               <li class="dropdown">
                 <a routerLink="/home">Home</a>
               </li>
-              <li><a routerLink="/about">About</a></li>
+              <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
               <li>
-                <a routerLink="/blog/posts">Blog</a>
+                <a routerLink="/blog/posts" (click)="closeMenu()">Blog</a>
               </li>
               <li>
-                <a routerLink="/contacts">Contact</a>
+                <a routerLink="/contacts" (click)="closeMenu()">Contact</a>
               </li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle='dropdown'>My profile <span class="fa fa-caret-down"></span></a>
+                <a class="dropdown-toggle">My profile <span class="fa fa-caret-down"></span></a>
                 <ul class="dropdown-menu h-nav">
-                  <li><a routerLink="/account-information">Account information</a></li>
-                  <li><a routerLink="/favourites">Favourites</a></li>
-                  <li><a routerLink="/own-adds">Own ads</a></li>
+                  <li><a routerLink="/account-information" (click)="closeMenu()">Account information</a></li>
+                  <li><a routerLink="/favourites" (click)="closeMenu()">Favourites</a></li>
+                  <li><a routerLink="/own-adds" (click)="closeMenu()">Own ads</a></li>
                   <li><a (click)="signOut()">Sign out</a></li>
                 </ul>
               </li>
