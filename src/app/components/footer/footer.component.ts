@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
-import {CookieService} from 'ngx-cookie-service';
 import {AuthorizationService} from '../../services/authorization.service';
 
 @Component({
@@ -11,6 +10,7 @@ import {AuthorizationService} from '../../services/authorization.service';
 export class FooterComponent implements OnInit {
 
   isFooterHidden = true;
+  scrollBtn: HTMLElement;
 
   constructor(private router: Router, private authService: AuthorizationService) {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
@@ -20,6 +20,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.scrollBtn = document.getElementById('to-top');
   }
 
   animate(elem: HTMLElement, style: string, unit: string, from: number, to: number, time: number, prop: boolean): void {
@@ -46,6 +47,22 @@ export class FooterComponent implements OnInit {
 
   goToTop() {
     this.animate(document.documentElement, 'scrollTop', '', document.documentElement.scrollTop, document.body.offsetTop, 500, true);
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    const docScrollBottom = document.documentElement.scrollTop + window.innerHeight === document.body.clientHeight;
+
+    if (document.documentElement.scrollTop >= 150) {
+      this.scrollBtn.style.display = 'block';
+    } else {
+      this.scrollBtn.style.display = 'none';
+    }
+    if (docScrollBottom) {
+      this.scrollBtn.style.display = 'block';
+    } else {
+      this.scrollBtn.style.display = 'none';
+    }
   }
 
 }

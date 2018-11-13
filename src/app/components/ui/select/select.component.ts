@@ -3,16 +3,16 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-select',
-  templateUrl: './ng-select.component.html',
+  templateUrl: './select.component.html',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NgSelectComponent),
+      useExisting: forwardRef(() => SelectComponent),
       multi: true
     }
   ]
 })
-export class NgSelectComponent implements ControlValueAccessor, AfterViewInit {
+export class SelectComponent implements ControlValueAccessor, AfterViewInit {
   @Input() _selectValue;
   @Input() items: Array<any>;
   @Input() disabled: boolean;
@@ -46,7 +46,7 @@ export class NgSelectComponent implements ControlValueAccessor, AfterViewInit {
   }
 
   writeValue(value: any) {
-    if (value !== undefined) {
+    if (!value) {
       this.selectValue = value;
     }
   }

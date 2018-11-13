@@ -32,7 +32,7 @@ import { ContactsComponent } from './components/pages/contacts/contacts.componen
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DirectiveModule} from '../directives/directive.module';
 import {NgSelectModule} from '@ng-select/ng-select';
-import { NgSelectComponent } from './components/ui/ng-select/ng-select.component';
+import { SelectComponent } from './components/ui/select/select.component';
 import { RangeSliderComponent } from './components/ui/range-slider/range-slider.component';
 import {MyTranslateRootModule} from '../shared/modules/my-translate-root.module';
 
@@ -56,7 +56,7 @@ import {MyTranslateRootModule} from '../shared/modules/my-translate-root.module'
     CarouselItemComponent,
     FilterListedComponent,
     ContactsComponent,
-    NgSelectComponent,
+    SelectComponent,
     RangeSliderComponent
   ],
   imports: [
