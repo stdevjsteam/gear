@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {emailPattern, signInValidationMessages} from '../validation-helper-model';
+import {AuthorizationService} from '../../../../services/authorization.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -9,8 +11,9 @@ import {emailPattern, signInValidationMessages} from '../validation-helper-model
 export class SignInComponent implements OnInit {
   validationMessages;
   loginForm: FormGroup;
+  rememberMe = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthorizationService, private router: Router) {
     this.validationMessages = signInValidationMessages;
   }
 
@@ -35,14 +38,21 @@ export class SignInComponent implements OnInit {
   signIn(signInFormData: any) {
     const controls = this.loginForm.controls;
     if (this.loginForm.valid) {
-      console.log(signInFormData);
+      this.authService.login(signInFormData).subscribe(res => {
+        this.authService.saveTokenAndNavigateToHomePage(this.rememberMe, res.token);
+      }, error => {});
     } else {
       Object.keys(controls)
         .forEach(controlName => {
           controls[controlName].markAsTouched();
+          controls[controlName].markAsDirty();
         });
       return;
     }
+  }
+
+  toggleRememberMe() {
+    this.rememberMe = ! this.rememberMe;
   }
 
 }

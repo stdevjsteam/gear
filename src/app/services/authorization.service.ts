@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {BaseHttpService} from './base-http-service';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {CookieService} from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +13,16 @@ export class AuthorizationService extends BaseHttpService {
   private static RESEND_EMAIL_URL = '/auth-users/resend-email/';
   private static RESET_PASSWORD_URL = '/auth-users/reset-password/';
   private static CHANGE_PASSWORD_URL = '/auth-users/change-password/';
-  private static FORGOT_PASSWORD_URL = '/auth-users/change-password/';
-  private static CONFIRM_ACCOUNT_URL = '/auth-users/change-password/';
+  private static FORGOT_PASSWORD_URL = '/auth-users/forgot-password/';
+  private static CONFIRM_ACCOUNT_URL = '/auth-users/confirm-account/';
+  private authToken: string;
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private router: Router, private cookieService: CookieService) {
     super(httpClient);
   }
+
+  get token() {return this.authToken; }
+  set token(token) {this.authToken = token; }
 
   login(credentials: object) {
     return this.post(AuthorizationService.LOGIN_URL, credentials);
@@ -44,6 +50,19 @@ export class AuthorizationService extends BaseHttpService {
 
   forgotPassword(credentials: object) {
     return this.post(AuthorizationService.FORGOT_PASSWORD_URL, credentials);
+  }
+
+  saveTokenAndNavigateToHomePage(rememberMe: boolean, token: string) {
+    if (rememberMe) {
+      this.cookieService.set('token', token);
+    } else {
+      this.token = token;
+    }
+    this.router.navigate(['/home']);
+  }
+
+  isLoggedIn(): boolean {
+    return !(!this.token) || this.cookieService.check('token');
   }
 
 }

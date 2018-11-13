@@ -17,7 +17,7 @@
   </ng-container>
   <div class="row form-links">
     <div class="col-lg-6 col-sm-12 form-align">
-      <input type="checkbox" name="check1" id="check1">
+      <input ([ngModel])="rememberMe" (change)="toggleRememberMe()" [checked]="rememberMe" type="checkbox" name="check1" id="check1">
       <label class="s-submitCheckLabel" for="check1"><span class="fa fa-check"></span></label>
       <label class="s-submitCheck" for="check1">{{'AUTH.REMEMBER_ME' | translate}}</label>
     </div>
