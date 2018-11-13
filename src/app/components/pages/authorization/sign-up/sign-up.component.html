@@ -2,28 +2,30 @@
   <h2 class="s-titleDet">{{'AUTH.SIGN_UP' | translate}}</h2>
 </header>
 <form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)" id="sign-up-form" class="s-form">
-
-    <input toggleErrClass [control]="signUpForm.get('email')" [errClass]="'invalid'" formControlName="email" type="text" [placeholder]="'AUTH.EMAIL' | translate"
-           name="email" id="user-email">
-    <ng-container *ngFor="let error of validationMessages.email">
-      <p class="error-message"
-         *ngIf="this.signUpForm.get('email').hasError(error.type) && this.signUpForm.get('email').touched && this.signUpForm.get('email').dirty || this.signUpForm.get('email').pending">{{'VALIDATION.EMAIL' | translate}}</p>
-    </ng-container>
-
-    <input toggleErrClass [control]="signUpForm.get('password')" [errClass]="'invalid'" formControlName="password" type="password" [placeholder]="'AUTH.PASSWORD' | translate"
-           name="password" id="user-password">
-    <ng-container *ngFor="let error of validationMessages.password">
-      <p class="error-message"
-         *ngIf="this.signUpForm.get('password').hasError(error.type) && this.signUpForm.get('password').touched && this.signUpForm.get('password').dirty || this.signUpForm.get('password').pending">{{error.message | translate}}</p>
-    </ng-container>
-
-    <input toggleErrClass [control]="signUpForm.get('repeat_password')" [errClass]="'invalid'" type="password"
-           [placeholder]="'AUTH.CONFIRM_PASSWORD' | translate" formControlName="repeat_password" name="confirm-password" id="confirm-password">
-    <ng-container *ngFor="let error of validationMessages.confirm_password">
-      <p class="error-message"
-         *ngIf="this.signUpForm.get('repeat_password').hasError(error.type) && this.signUpForm.get('repeat_password').touched && this.signUpForm.get('repeat_password').dirty || this.signUpForm.get('repeat_password').pending">{{error.message | translate}}</p>
-    </ng-container>
-
+    <div class="text-field">
+        <input toggleErrClass [control]="signUpForm.get('email')" [errClass]="'invalid'" formControlName="email" type="text" [placeholder]="'AUTH.EMAIL' | translate"
+               name="email" id="user-email">
+        <ng-container *ngFor="let error of validationMessages.email">
+            <p class="error-message"
+               *ngIf="this.signUpForm.get('email').hasError(error.type) && this.signUpForm.get('email').touched && this.signUpForm.get('email').dirty || this.signUpForm.get('email').pending">{{'VALIDATION.EMAIL' | translate}}</p>
+        </ng-container>
+    </div>
+    <div class="text-field">
+        <input toggleErrClass [control]="signUpForm.get('password')" [errClass]="'invalid'" formControlName="password" type="password" [placeholder]="'AUTH.PASSWORD' | translate"
+               name="password" id="user-password">
+        <ng-container *ngFor="let error of validationMessages.password">
+            <p class="error-message"
+               *ngIf="this.signUpForm.get('password').hasError(error.type) && this.signUpForm.get('password').touched && this.signUpForm.get('password').dirty || this.signUpForm.get('password').pending">{{error.message | translate}}</p>
+        </ng-container>
+    </div>
+    <div class="text-field">
+        <input toggleErrClass [control]="signUpForm.get('repeat_password')" [errClass]="'invalid'" type="password"
+               [placeholder]="'AUTH.CONFIRM_PASSWORD' | translate" formControlName="repeat_password" name="confirm-password" id="confirm-password">
+        <ng-container *ngFor="let error of validationMessages.confirm_password">
+            <p class="error-message"
+               *ngIf="this.signUpForm.get('repeat_password').hasError(error.type) && this.signUpForm.get('repeat_password').touched && this.signUpForm.get('repeat_password').dirty || this.signUpForm.get('repeat_password').pending">{{error.message | translate}}</p>
+        </ng-container>
+    </div>
     <div class="row form-links">
     </div>
     <div class="row form-links form-align">
