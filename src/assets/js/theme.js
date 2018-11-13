@@ -31,22 +31,22 @@
 			this.dropdownhover();
 			
 			// Page preloader
-			this.initPagePreloader();
+			// this.initPagePreloader(); removed
 			
 			// Equal Height
 			this.setEqualHeight();
 			
 			// Slider
-			this.initSlider();
+			// this.initSlider(); changed
 			
 			//Setup WOW.js
-			this.initScrollAnimations();
+			// this.initScrollAnimations(); dont no TODO
 
 			// Owl Carousel
 			this.initOwlCarousel();
 			
 			// bxSlider
-			this.initBxSlider();
+			// this.initBxSlider(); changed
 			
 			// Tabs
 			this.initTabs();
@@ -58,7 +58,7 @@
 			this.initNumberCounter();
 			
 			// Go to top
-			this.initGoToTop();
+			// this.initGoToTop(); done
 			
 			
 		},
