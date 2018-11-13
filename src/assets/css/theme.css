@@ -212,13 +212,6 @@ body{
     z-index:-100;
 }
 
-.s-form .error-message {
-   color: #ff0c0c;
-    font-size: 12px;
-    font-style: italic;
-    margin-bottom: 15px;
-}
-
 .s-headerSubmit{
     padding-bottom: 20px;
     margin-bottom: 50px;

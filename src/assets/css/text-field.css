@@ -57,3 +57,11 @@
 .text-field.gray input, textarea {
     background-color: #f7f7f7;
 }
+
+.text-field .error-message {
+    color: #ff0c0c;
+    font-size: 11px;
+    font-style: italic;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
