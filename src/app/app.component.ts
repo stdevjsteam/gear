@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ModelsService} from '../shared/models.service';
-import {Model} from '../shared/car-models/model.model';
-import {ResponseModel} from '../shared/car-models/response-model.model';
+import {AuthorizationService} from './services/authorization.service';
+import {TranslateService} from '@ngx-translate/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,10 @@ import {ResponseModel} from '../shared/car-models/response-model.model';
 export class AppComponent implements OnInit {
   title = 'app';
 
-  constructor(private serv: ModelsService) {}
+  constructor (private authService: AuthorizationService, private translator: TranslateService, public router: Router) {
+    translator.setDefaultLang('arm');
+    translator.use('arm');
+  }
   ngOnInit() {
     // this.serv.getModles().subscribe( (res: ResponseModel<Model>) => {
     //   res.results.forEach(obj => console.log(obj.productionEnd));

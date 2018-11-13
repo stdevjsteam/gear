@@ -9,6 +9,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DirectiveModule} from '../../../../directives/directive.module';
+import {MyTranslateRootModule} from '../../../../shared/modules/my-translate-root.module';
+import {MyTranslateChildModule} from '../../../../shared/modules/my-translate-child.module';
 
 const routes: Routes = [
   {path: '', component: AuthorizationComponent, children: [
@@ -32,6 +34,7 @@ const routes: Routes = [
     DirectiveModule,
     ReactiveFormsModule,
     FormsModule,
+    MyTranslateChildModule,
     DirectiveModule,
     RouterModule.forChild(routes)
   ],

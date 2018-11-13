@@ -25,7 +25,7 @@ export class ErrorMessageClassDirective implements DoCheck {
     } else if (this.control.valid) {
       this.renderer.removeClass(this.hostElement.nativeElement, this.errClass);
     } else {
-      this.control.markAsUntouched();
+      this.control.markAsUntouched({onlySelf: true});
     }
   }
 }

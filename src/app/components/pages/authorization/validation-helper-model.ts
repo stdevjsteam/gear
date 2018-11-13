@@ -1,43 +1,44 @@
 export const signUpValidationMessages = {
   'email': [
-    {type: 'required', message: 'Please enter your email'},
-    {type: 'pattern', message: 'Enter a valid email'}
+    {type: 'required', message: 'AUTH.REQUIRED_FIELD'},
+    {type: 'pattern', message: 'AUTH.INVALID_EMAIL'},
+    {type: 'exists', message: 'AUTH.EXISITNG_USER_WITH_EMAIL'}
   ],
   'confirm_password': [
-    {type: 'required', message: 'Please confirm your password'},
-    {type: 'areEqual', message: 'Password mismatch'},
-    {type: 'minlength', message: 'Password must be at least 6 characters long'}
+    {type: 'required', message: 'AUTH.PASSWORD'},
+    {type: 'areEqual', message: 'AUTH.PASSWORDS_NOT_MATCH'},
+    {type: 'minlength', message: 'AUTH.MIN_LENGTH_PASSWORD'}
   ],
   'password': [
-    {type: 'required', message: 'Please enter your password'},
-    {type: 'minlength', message: 'Password must be at least 6 characters long'},
+    {type: 'required', message: 'AUTH.REQUIRED_FIELD'},
+    {type: 'minlength', message: 'AUTH.MIN_LENGTH_PASSWORD'},
   ]
 };
 
 export const signInValidationMessages = {
   'email': [
-    {type: 'required', message: 'Please enter your email'},
-    {type: 'pattern', message: 'Enter a valid email'}
+    {type: 'required', message: 'AUTH.REQUIRED_FIELD'},
+    {type: 'pattern', message: 'AUTH.INVALID_EMAIL'}
   ],
   'password': [
-    {type: 'required', message: 'Please enter your password'},
-    {type: 'minlength', message: 'Password must be at least 6 characters long'},
+    {type: 'required', message: 'AUTH.REQUIRED_FIELD'},
+    {type: 'minlength', message: 'VALIDATION.PASSWORD'},
   ]
 };
 
 export const forgotPasswordValidationMessages = {
   'email': [
-    {type: 'required', message: 'Please enter your email'},
-    {type: 'pattern', message: 'Enter a valid email'},
-    {type: 'not-exist', message: 'There are no user with this email'}
+    {type: 'required', message: 'AUTH.REQUIRED_FIELD'},
+    {type: 'pattern', message: 'AUTH.INVALID_EMAIL'},
+    {type: 'not-exist', message: 'AUTH.NOT_EXISITNG_USER_WITH_EMAIL'}
   ]
 };
 
 export const resetPassValidationMessages = {
   'password': [
-    {type: 'required', message: 'Please enter your password'},
-    {type: 'minlength', message: 'Password must be at least 6 characters long'},
-    {type: 'areEqual', message: 'Password mismatch'},
+    {type: 'required', message: 'AUTH.REQUIRED_FIELD'},
+    {type: 'minlength', message: 'AUTH.MIN_LENGTH_PASSWORD'},
+    {type: 'areEqual', message: 'AUTH.PASSWORDS_NOT_MATCH'},
   ]
 };
 
