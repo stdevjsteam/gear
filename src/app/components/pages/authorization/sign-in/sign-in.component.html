@@ -6,12 +6,14 @@
   <input toggleErrClass [control]="loginForm.get('username')" [errClass]="'invalid'" formControlName="username" type="text" [placeholder]="'AUTH.EMAIL' | translate"
          name="email" id="user-email">
   <ng-container *ngFor="let error of validationMessages.email">
-    <p class="error-message" *ngIf="this.loginForm.get('username').hasError(error.type) && this.loginForm.touched && this.loginForm.dirty || this.loginForm.pending">{{error.message | translate}}</p>
+    <p class="error-message"
+       *ngIf="this.loginForm.get('username').hasError(error.type) && this.loginForm.get('username').touched && this.loginForm.get('username').dirty || this.loginForm.get('username').pending">{{error.message | translate}}</p>
   </ng-container>
   <input toggleErrClass [control]="loginForm.get('password')" [errClass]="'invalid'" formControlName="password" type="password" [placeholder]="'AUTH.PASSWORD' | translate"
          name="password" id="user-password">
   <ng-container *ngFor="let error of validationMessages.password">
-    <p class="error-message" *ngIf="this.loginForm.get('password').hasError(error.type) && this.loginForm.touched && this.loginForm.dirty || this.loginForm.pending">{{error.message | translate}}</p>
+    <p class="error-message"
+       *ngIf="this.loginForm.get('password').hasError(error.type) && this.loginForm.get('password').touched && this.loginForm.get('password').dirty || this.loginForm.get('password').pending">{{error.message | translate}}</p>
   </ng-container>
   <div class="row form-links">
     <div class="col-lg-6 col-sm-12 form-align">
