@@ -454,6 +454,7 @@ a.m-langLink{
     margin: 0;
 }
 
+/*
 .b-search__main-form select{
     width:100%;
     padding: 10px 20px 10px 25px;
@@ -467,6 +468,7 @@ a.m-langLink{
     appearance: none!important;
     cursor:pointer;
 }
+*/
 
 .b-search__main-form select + span.fa{
     top:14px;
@@ -489,16 +491,21 @@ a.m-langLink{
 
 .m-firstSelects, .m-secondSelects {
     margin-bottom: 45px;
-    overflow: hidden;
 }
 
-.b-search__main-form label{
+.b-search__main-form .label{
     text-transform: uppercase;
     font: 600 14px 'Open Sans',sans-serif;
     text-align: right;
     margin: 11px 0 0 0;
     float:left;
     display: block;
+}
+
+.b-search__main-form .price-label {
+    text-transform: uppercase;
+    font: 600 14px 'Open Sans',sans-serif;
+    padding: 55px 15px 25px 15px;
 }
 
 .b-search__main-form-submit{
@@ -540,6 +547,10 @@ a.m-langLink{
     display: block;
 }
 
+.m-advancedSelects {
+    margin-top: 60px;
+}
+
 .m-advancedSelects .mb-sm {
     margin-bottom: 15px;
 }
@@ -553,7 +564,7 @@ a.m-langLink{
 }
 
 .m-index .b-search__main-form-submit {
-    padding-top: 67px;
+    padding-top: 116px;
 }
 
 .m-index .s-submit .s-submitCheckLabel {
@@ -577,7 +588,7 @@ a.m-langLink{
     margin-top: 15px;
     margin-left: 15px;
 }
-
+/*
 .ui-slider-handle{
     width:20px;
     height:20px;
@@ -586,7 +597,7 @@ a.m-langLink{
     border-radius: 100%;
     border: 2px solid #eee;
     text-align: center;
-}
+}*/
 
 .ui-slider-handle:after{
     width:12px;
@@ -1390,6 +1401,7 @@ a.m-langLink{
     margin-bottom: 20px;
 }
 
+/*
 .b-contact__form input[type='text']{
     background: transparent;
     border:1px solid #555555;
@@ -1410,6 +1422,7 @@ a.m-langLink{
 .b-contact__form input[type='text']:-moz-placeholder {
     font: 400 13px 'Open Sans',sans-serif;
 }
+*/
 
 .b-contact__form form > div{
     display: inline-block;

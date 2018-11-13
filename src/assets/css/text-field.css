@@ -1,0 +1,59 @@
+/* Text field styles */
+
+.text-field {
+    margin-bottom: 20px;
+}
+
+.text-field input, .text-field textarea {
+    width: 100%;
+    padding: 15px 20px;
+    font: 400 11px 'Open Sans',sans-serif;
+    border: 1px solid #eeeeee;
+    text-transform: uppercase;
+    border-radius: 30px;
+    outline: none;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    color: #444;
+}
+
+.text-field input::placeholder, .text-field textarea::placeholder {
+    font: 400 11px 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.text-field input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    font: 400 11px 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.text-field input:-moz-placeholder, .text-field textarea:-moz-placeholder { /* Firefox 19+ */
+    font: 400 11px 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.text-field input:-ms-input-placeholder, .text-field textarea:-ms-input-placeholder { /* IE 10+ */
+    font: 400 11px 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.text-field input:-moz-placeholder, .text-field textarea::-moz-placeholder { /* Firefox 18- */
+    font: 400 11px 'Open Sans',sans-serif;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.text-field input:focus, textarea:focus {
+    border-color: #f76d2b;
+}
+
+.text-field.gray input, textarea {
+    background-color: #f7f7f7;
+}

@@ -553,7 +553,7 @@
        float:right; 
     }
     
-    .b-search__main-form label{
+    .b-search__main-form .label{
         text-align: left;
     }
     

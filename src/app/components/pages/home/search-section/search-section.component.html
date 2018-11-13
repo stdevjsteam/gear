@@ -16,48 +16,75 @@
             <div class="m-firstSelects">
               <div class="col-xs-4">
                 <!--SELECT COMPONENT-->
-                <ng-select
-                  [items]="['car1', 'car2']"
-                ></ng-select>
+                <div class="select-box">
+                  <ng-select
+                          [items]="['BMW', 'Lamborghini', 'Ferrari']"
+                          placeholder="Any Make"
+                  ></ng-select>
+                  <span class="fa fa-caret-down arrow-icon"></span>
+                </div>
                 <!--SELECT COMPONENT-->
-                <span class="fa fa-caret-down"></span>
                 <p>MISSING MANUFACTURER?</p>
               </div>
               <div class="col-xs-4">
-                <select name="select2">
-                  <option value="" selected="">Any Model</option>
-                </select>
-                <span class="fa fa-caret-down"></span>
+                <!--SELECT COMPONENT-->
+                <div class="select-box">
+                  <ng-select
+                          [items]="['X3', 'X5', 'X6']"
+                          placeholder="Any Model"
+                  ></ng-select>
+                  <span class="fa fa-caret-down arrow-icon"></span>
+                </div>
+                <!--SELECT COMPONENT-->
                 <p>MISSING MODEL?</p>
               </div>
               <div class="col-xs-4">
-                <select name="select3">
-                  <option value="" selected="">Generation</option>
-                </select>
-                <span class="fa fa-caret-down"></span>
+                <!--SELECT COMPONENT-->
+                <div class="select-box">
+                  <ng-select
+                          [items]="['Generation 1', 'Generation 2', 'Generation 3', 'Generation 4', 'Generation 5', 'Generation 6', 'Generation 7', 'Generation 8']"
+                          placeholder="Any Model"
+                  ></ng-select>
+                  <span class="fa fa-caret-down arrow-icon"></span>
+                </div>
+                <!--SELECT COMPONENT-->
                 <p>Preferred generation</p>
               </div>
             </div>
             <div class="m-secondSelects b-search__main-form-range">
-              <label>PRICE RANGE</label>
-              <!--RANGE COMPONENT-->
-              <app-range-slider></app-range-slider>
-              <!--RANGE COMPONENT-->
+              <p class="price-label">PRICE RANGE</p>
+              <div class="col-8">
+                <div class="col-lg-6">
+                  <!--RANGE COMPONENT-->
+                  <app-range-slider></app-range-slider>
+                  <!--RANGE COMPONENT-->
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-4 col-xs-12 text-left s-noPadding">
+          <div class="col-md-4 col-xs-12 s-noPadding">
             <div class="b-search__main-form-range">
               <div class="col-xs-6">
-                <select name="select4">
-                  <option value="" selected="">Min Year</option>
-                </select>
-                <span class="fa fa-caret-down"></span>
+                <!--SELECT COMPONENT-->
+                <div class="select-box">
+                  <ng-select
+                          [items]="['1991', '1992', '1993']"
+                          placeholder="Min Year"
+                  ></ng-select>
+                  <span class="fa fa-caret-down arrow-icon"></span>
+                </div>
+                <!--SELECT COMPONENT-->
               </div>
               <div class="col-xs-6">
-                <select name="select5">
-                  <option value="" selected="">Max Year</option>
-                </select>
-                <span class="fa fa-caret-down"></span>
+                <!--SELECT COMPONENT-->
+                <div class="select-box">
+                  <ng-select
+                          [items]="['1991', '1992', '1993']"
+                          placeholder="Max Year"
+                  ></ng-select>
+                  <span class="fa fa-caret-down arrow-icon"></span>
+                </div>
+                <!--SELECT COMPONENT-->
               </div>
             </div>
             <div class="b-search__main-form-submit">

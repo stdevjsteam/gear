@@ -16,20 +16,27 @@
             <p>Enter your comments through the form below, and our customer service professionals will contact you as soon as possible.</p>
             <div id="success"></div>
             <form id="contactForm" novalidate class="s-form">
-              <div class="s-relative">
-                <select name="user-topic" id="user-topic" class="m-select">
-                  <option value="Not select">SELECT A TOPIC</option>
-                  <option value="Topic 1">TOPIC 1</option>
-                  <option value="Topic 2">TOPIC 2</option>
-                  <option value="Topic 3">TOPIC 3</option>
-                  <option value="Topic 4">TOPIC 4</option>
-                </select>
-                <span class="fa fa-caret-down"></span>
+                <!--SELECT COMPONENT-->
+                <div class="select-box white">
+                  <ng-select
+                          [items]="['Topic 1', 'Topic 2', 'Topic 3']"
+                          placeholder="Select Topic"
+                  ></ng-select>
+                  <span class="fa fa-caret-down arrow-icon"></span>
+                </div>
+                <!--SELECT COMPONENT-->
+              <div class="text-field">
+                <input type="text" placeholder="YOUR NAME" value="" name="user-name" id="user-name" />
               </div>
-              <input type="text" placeholder="YOUR NAME" value="" name="user-name" id="user-name" />
-              <input type="text" placeholder="EMAIL ADDRESS %" value="" name="user-email" id="user-email" />
-              <input type="text" placeholder="PHONE NO." value="" name="user-phone" id="user-phone" />
-              <textarea id="user-message" name="user-message" placeholder="COMMENT/SUGGESTIONS/FEEDBACK"></textarea>
+              <div class="text-field">
+                <input type="text" placeholder="EMAIL ADDRESS %" value="" name="user-email" id="user-email" />
+              </div>
+              <div class="text-field">
+                <input type="text" placeholder="PHONE NO." value="" name="user-phone" id="user-phone" />
+              </div>
+              <div class="text-field">
+                <textarea id="user-message" name="user-message" placeholder="COMMENT/SUGGESTIONS/FEEDBACK"></textarea>
+              </div>
               <button type="submit" class="btn m-btn">SUBMIT NOW<span class="fa fa-angle-right"></span></button>
             </form>
           </div>

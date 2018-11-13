@@ -2,49 +2,49 @@
   <div class="col-xs-12 col-md-12 " id="advanced-options">
     <div class="m-advancedSelects">
       <div class="col-xs-4 mb-sm">
-        <select name="select1">
-          <option value="" selected="">Any Make</option>
-        </select>
-        <span class="fa fa-caret-down"></span>
+        <!--SELECT COMPONENT-->
+        <div class="select-box">
+          <ng-select
+                  [items]="['Red', 'Blue', 'Green']"
+                  placeholder="Color"
+          ></ng-select>
+          <span class="fa fa-caret-down arrow-icon"></span>
+        </div>
+        <!--SELECT COMPONENT-->
+        <p>Preferred color</p>
+      </div>
+      <div class="col-xs-4 mb-sm">
+        <!--SELECT COMPONENT-->
+        <div class="select-box">
+          <ng-select
+                  [items]="['Sedan', 'SUV', 'Coupe']"
+                  placeholder="Type"
+          ></ng-select>
+          <span class="fa fa-caret-down arrow-icon"></span>
+        </div>
+        <!--SELECT COMPONENT-->
+        <p>Preferred type</p>
+      </div>
+      <div class="col-xs-4 mb-sm">
+        <div class="text-field gray">
+          <input type="text" placeholder="Enter ">
+        </div>
         <p>MISSING MANUFACTURER?</p>
       </div>
       <div class="col-xs-4 mb-sm">
-        <select name="select1">
-          <option value="" selected="">Any Make</option>
-        </select>
-        <span class="fa fa-caret-down"></span>
-        <p>MISSING MANUFACTURER?</p>
-      </div>
-      <div class="col-xs-4 s-submit mb-sm">
-        <input type="text" placeholder="Enter " >
-        <p>MISSING MANUFACTURER?</p>
-      </div>
-      <div class="col-xs-4 mb-sm s-submit">
-        <input type="text" placeholder="Enter " >
-        <p>MISSING MANUFACTURER?</p>
-      </div>
-      <div class="col-xs-4 mb-sm s-submit">
-        <input type="text" placeholder="Enter " >
-        <p>MISSING MANUFACTURER?</p>
-      </div>
-      <div class="col-xs-4 mb-sm s-submit">
-        <input type="text" placeholder="Enter " >
-        <p>MISSING MANUFACTURER?</p>
-      </div>
-      <div class="col-xs-4 mb-sm s-submit">
-        <input type="text" placeholder="Enter " >
-        <p>MISSING MANUFACTURER?</p>
+        <div class="text-field gray">
+          <input type="text" placeholder="Enter ">
+        </div>
       </div>
       <div class="col-xs-4 mb-sm">
-        <select name="select1">
-          <option value="" selected="">Any Make</option>
-        </select>
-        <span class="fa fa-caret-down"></span>
-        <p>MISSING MANUFACTURER?</p>
+        <div class="text-field gray">
+          <input type="text" placeholder="Enter ">
+        </div>
       </div>
-      <div class="col-xs-4 mb-sm s-submit">
-        <input type="text" placeholder="Enter " >
-        <p>MISSING MANUFACTURER?</p>
+      <div class="col-xs-4 mb-sm">
+        <div class="text-field gray">
+          <input type="text" placeholder="Enter ">
+        </div>
       </div>
       <div class="col-xs-4 mb-sm b-submit__main-element">
         <input type="checkbox" name="check1" id="check1">
@@ -52,14 +52,14 @@
         <label class="s-submitCheck" for="check1">Trip Computer</label>
       </div>
       <div class="col-xs-4 mb-sm b-submit__main-element">
-        <input type="checkbox" name="check5" id="check2">
+        <input type="checkbox" name="check2" id="check2">
         <label class="s-submitCheckLabel" for="check2"><span class="fa fa-check"></span></label>
-        <label class="s-submitCheck" for="check2">Side Airbags</label>
+        <label class="s-submitCheck" for="check2">ABS</label>
       </div>
       <div class="col-xs-4 mb-sm b-submit__main-element">
-        <input type="checkbox" name="check5" id="check3">
+        <input type="checkbox" name="check3" id="check3">
         <label class="s-submitCheckLabel" for="check3"><span class="fa fa-check"></span></label>
-        <label class="s-submitCheck" for="check3">Fog Lamps</label>
+        <label class="s-submitCheck" for="check3">Heated Seats</label>
       </div>
     </div>
   </div>

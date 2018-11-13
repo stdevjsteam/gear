@@ -1,0 +1,31 @@
+/* Ng slider styles */
+
+.ng5-slider .ng5-slider-bar {
+    height: 10px!important;
+    border: 1px solid #eee;
+    background: #ffffff!important;
+}
+
+.ng5-slider .ng5-slider-selection {
+    background: #eeeeee!important;
+}
+
+.ng5-slider .ng5-slider-pointer {
+    width: 20px!important;
+    height: 20px!important;
+    position: absolute!important;
+    top: -5px!important;
+    border-radius: 100%!important;
+    border: 4px solid #eee!important;
+    background-color: #f76d2b!important;
+    outline: none!important;
+}
+
+.ng5-slider .ng5-slider-pointer:after {
+    display: none;
+}
+
+/*
+.ng5-slider .ng5-slider-bar {
+    background: white!important;
+}*/

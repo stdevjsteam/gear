@@ -168,7 +168,7 @@ body{
     right:25px!important;
 }
 
-.s-form input[type='text'], input[type='password'], .s-form textarea{
+/*.s-form input[type='text'], input[type='password'], .s-form textarea{
     display: block;
     width: 100%;
     margin-bottom: 15px;
@@ -178,13 +178,13 @@ body{
     text-transform: uppercase;
     border-radius: 30px;
     outline: none;
-}
+}*/
 
 .s-form textarea{
     border-radius: 20px;
     margin-bottom: 20px;
 }
-
+/*
 .s-form input[type='text']:focus,.s-form textarea:focus{
     outline:none;
 }
@@ -199,7 +199,7 @@ body{
 
 .s-form input.invalid {
     border-color: #ff0c0c!important;
-}
+}*/
 
 .s-form button[type='submit']{
     font: 700 12px 'Open Sans',sans-serif;
@@ -289,7 +289,7 @@ body{
     right:25px!important;
 }
 
-.s-submit input[type='text'], input[type='password'] {
+/*.s-submit input[type='text'], input[type='password'] {
     display: block;
     width: 100%;
     padding: 15px 20px;
@@ -302,7 +302,7 @@ body{
     padding-top: 13px;
     padding-bottom: 13px;
     height:46px;
-}
+}*/
 
 .s-submit.white input[type='text'], input[type='password'] {
     background: #FFFFFF!important;
