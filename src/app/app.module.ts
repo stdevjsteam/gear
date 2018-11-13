@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import { Ng5SliderModule } from 'ng5-slider';
@@ -81,6 +81,9 @@ import {MyTranslateRootModule} from '../shared/modules/my-translate-root.module'
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService, multi: true
     }],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
