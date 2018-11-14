@@ -146,8 +146,27 @@ a.m-langLink{
 .b-nav__logo{
     float:left;
     padding: 8px 0 0 5px;
-    background: url(../images/logo/logo.png) left top no-repeat;
     text-transform: uppercase;
+    max-width: 130px;
+    height: 58px;
+}
+
+.b-nav__logo a {
+    display: inline-block;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.b-nav__logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.b-nav__logo a:hover {
+    opacity: 0.7;
 }
 
 .b-nav__logo h3{
@@ -1762,7 +1781,6 @@ a.m-langLink{
 }
 
 .b-footer .b-nav__logo{
-    background: url(logoF.png) left top no-repeat;
     float:none;
 }
 

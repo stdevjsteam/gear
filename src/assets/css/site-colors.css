@@ -45,17 +45,6 @@ body{
 /*b-topBar*/
 
 /*b-nav*/
-.b-nav__logo h3 a{
-    color:#f76d2b;
-}
-
-.b-nav__logo h3 a span{
-    color:#545454;
-}
-
-.b-nav__logo h2 a{
-    color:#999999;
-}
 
 .b-nav__list ul li a{
     color:#555;
